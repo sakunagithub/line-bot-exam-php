@@ -30,7 +30,7 @@
     if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือก ATA ที่ต้องการค้นหา เช่น Paradox Cisco SPA8000";
+        $arrayPostData['messages'][0]['text'] = "กรุณาเลือก ATA ที่ต้องการค้นหา เช่น Paradox, Cisco SPA8000";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
