@@ -11,7 +11,7 @@
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
     #ลิงค์เว็บ
-    if($message == "เว็บ" || $message == "web" || $message == "คู่มือ"){
+    if($message == "เว็บ" || $message == "Web" || $message == "คู่มือ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ http://www.cat7045.com/";
@@ -19,7 +19,7 @@
     }
     
     #เบอร์โทร
-    if($message == "เบอร์โทร" || $message == "โทร" || $message == "support"){
+    if($message == "เบอร์โทร" || $message == "โทร" || $message == "Support"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
