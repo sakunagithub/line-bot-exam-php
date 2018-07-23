@@ -15,7 +15,7 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ 🌏 http://www.cat7045.com/";
-                $arrayPostData['messages'][0]['text'] = "1234";
+                $arrayPostData['messages'][1]['text'] = "1234";
         replyMsg($arrayHeader,$arrayPostData);
     }
     
