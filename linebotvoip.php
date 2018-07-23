@@ -35,7 +35,7 @@
     } 
 
     #ATA Paradox
-    if($message == "ATA Paradox" || $message == "Paradox" || $message == "paradox" || $message == "พาราด็อกซ์" || $message == "พาราดอก" || $message == "pd"){
+    if($message == "ATA Paradox" || $message == "Paradox" || $message == "paradox" || $message == "pd"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "Paradox :: http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
@@ -43,7 +43,7 @@
     } 
 
     #ATA Cisco SPA8000
-    if($message == "ATA Cisco SPA8000" || $message == "Cisco SPA8000" || $message == "CiscoSPA8000" || $message == "Cisco SPA" || $message == "CiscoSPA8000" || $message == "pd"){
+    if($message == "ATA Cisco SPA8000" || $message == "Cisco SPA8000" || $message == "CiscoSPA8000" || $message == "Cisco SPA" || $message == "CiscoSPA8000" || $message == "cc8000"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "Cisco SPA8000 :: http://122.155.128.138/cat7045/manual/Cisco%20SPA8000/spa8000.pdf";
