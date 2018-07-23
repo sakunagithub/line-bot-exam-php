@@ -11,7 +11,7 @@
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
     #ลิงค์เว็บ
-    if($message == "เว็บ" || $message == "web"){
+    if($message == "เว็บ" || $message == "Web" || $message == "web"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ 🌏 http://www.cat7045.com/";
@@ -19,7 +19,7 @@
     }
     
     #เบอร์โทร
-    if($message == "เบอร์โทร" || $message == "โทร" || $message == "support" || $message == "call"){
+    if($message == "เบอร์โทร" || $message == "โทร" || $message == "ติดต่อ" || $message == "support" || $message == "call" || $message == "Call"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม แจ้งปัญหาการใช้งาน ☎ ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
@@ -27,7 +27,7 @@
     } 
 
     #รายชื่อ ATA
-    if($message == "ATA" || $message == "ata"){
+    if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "เลือก ATA ที่ต้องการค้นหา เช่น Paradox Cisco SPA8000";
