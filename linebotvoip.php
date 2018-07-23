@@ -24,7 +24,15 @@
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม แจ้งปัญหาการใช้งาน ☎ ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
         replyMsg($arrayHeader,$arrayPostData);
-    }   
+    } 
+
+    #ATA Paradox
+    if($message == "ATA Paradox" || $message == "Paradox" || $message == "paradox" ){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "Paradox :: http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
 
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
