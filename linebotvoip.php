@@ -14,7 +14,8 @@
     if($message == "เว็บ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ http://www.cat7045.com/";
+        $arrayPostData['messages'][0]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ http://www.cat7045.com/ 
+        สอบถามการติดตั้งเพิ่มเติม หาคู่มือรุ่นที่ต้องการไม่พบ ติดต่อที่ 02-1047045";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
