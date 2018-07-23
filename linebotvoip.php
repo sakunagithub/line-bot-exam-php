@@ -14,7 +14,7 @@
     if($message == "เว็บ" || $message == "Web" || $message == "คู่มือ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ http://www.cat7045.com/";
+        $arrayPostData['messages'][0]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ 🌏 http://www.cat7045.com/";
         replyMsg($arrayHeader,$arrayPostData);
     }
     
@@ -22,7 +22,7 @@
     if($message == "เบอร์โทร" || $message == "โทร" || $message == "Support" || $message == "แจ้งเสีย"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม แจ้งปัญหาการใช้งาน ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
+        $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม แจ้งปัญหาการใช้งาน 📞 ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
         replyMsg($arrayHeader,$arrayPostData);
     }   
 
