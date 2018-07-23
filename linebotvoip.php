@@ -14,7 +14,7 @@
     if($message == "เว็บ" || $message == "web" || $message == "คู่มือ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = $arrayPostData["สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ 🌏 http://www.cat7045.com/"."<br>"."test4"];
+        $arrayPostData['messages'][0]['text'] = $arrayPostData["สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ 🌏 http://www.cat7045.com/",<br>,"test4"];
         replyMsg($arrayHeader,$arrayPostData);
     }
     
