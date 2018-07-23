@@ -11,7 +11,7 @@
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
     #ลิงค์เว็บ
-    if($message == "เว็บ" || $message == "web" || $message == "คู่มือ"){
+    if($message == "เว็บ" || $message == "web"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ 🌏 http://www.cat7045.com/";
@@ -26,11 +26,27 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
+    #รายชื่อ ATA
+    if($message == "ATA" || $message == "ata"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "เลือก ATA ที่ต้องการค้นหา เช่น Paradox Cisco SPA8000";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+
     #ATA Paradox
-    if($message == "ATA Paradox" || $message == "Paradox" || $message == "paradox" ){
+    if($message == "ATA Paradox" || $message == "Paradox" || $message == "paradox" || $message == "พาราด็อกซ์" || $message == "พาราดอก" || $message == "pd"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "Paradox :: http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+
+    #ATA Cisco SPA8000
+    if($message == "ATA Cisco SPA8000" || $message == "Cisco SPA8000" || $message == "CiscoSPA8000" || $message == "Cisco SPA" || $message == "CiscoSPA8000" || $message == "pd"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "Cisco SPA8000 :: http://122.155.128.138/cat7045/manual/Cisco%20SPA8000/spa8000.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
