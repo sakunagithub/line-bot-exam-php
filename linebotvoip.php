@@ -10,6 +10,14 @@
     
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
+    //Keyword
+    if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "กรุณาเลือกข้อมูลที่ต้องการค้นหา โดยเลือกหัวข้อดังนี้ :: Web, Call, ATA";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
     #ลิงค์เว็บ
     if($message == "เว็บ" || $message == "Web" || $message == "web"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -19,7 +27,7 @@
     }
     
     #เบอร์โทร
-    if($message == "เบอร์โทร" || $message == "โทร" || $message == "ติดต่อ" || $message == "support" || $message == "call" || $message == "Call"){
+    if($message == "เบอร์โทร" || $message == "โทร" || $message == "ติดต่อ" || $message == "Call" || $message == "call"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม แจ้งปัญหาการใช้งาน ☎ ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
