@@ -15,8 +15,8 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่ 🌏 http://www.cat7045.com/ test2";
-        $arrayPostData2['messages'][0]['text'] = "🌏 test3";
-        replyMsg($arrayHeader,$arrayPostData,$arrayPostData2);
+        $arrayPostData['messages'][0]['text'] = "🌏 test3";
+        replyMsg($arrayHeader,$arrayPostData);
     }
     
     #เบอร์โทร
