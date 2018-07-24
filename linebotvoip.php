@@ -38,7 +38,7 @@
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาเลือก ATA ที่ต้องการค้นหา ได้แก่\nพิมพ์ A1 :: Paradox\nพิมพ์ A2 :: Cisco SPA8000\nพิมพ์ A3 :: Cisco SPA112";
+        $arrayPostData['messages'][0]['text'] = "กรุณาเลือก ATA ที่ต้องการค้นหา ได้แก่\nพิมพ์ A1 :: Paradox\nพิมพ์ A2 :: Cisco SPA8000\nพิมพ์ A3 :: Cisco SPA112\nพิมพ์ A4 :: Gran gxw400";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
@@ -65,6 +65,15 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "📝 Cisco SPA112\n📥 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+
+    #ATA Gran gxw400
+    else if($message == "A4" || $message == "a4" || $message == "Gran gxw400" || $message == "Grangxw400" || 
+       $message == "gxw400"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "📝 Gran gxw400\n📥 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
