@@ -14,7 +14,7 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาเลือกข้อมูลที่ต้องการค้นหา โดยเลือกหัวข้อดังนี้ :: Web, Call, ATA";
+        $arrayPostData['messages'][0]['text'] = "กรุณาเลือกข้อมูลที่ต้องการค้นหา <br /> โดยเลือกหัวข้อดังนี้ :: Web, Call, ATA";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
