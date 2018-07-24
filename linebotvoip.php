@@ -30,7 +30,7 @@
     if($message == "เบอร์โทร" || $message == "โทร" || $message == "ติดต่อ" || $message == "Call" || $message == "call"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม แจ้งปัญหาการใช้งาน \n ☎ ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
+        $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม \n แจ้งปัญหาการใช้งาน \n ☎ ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
