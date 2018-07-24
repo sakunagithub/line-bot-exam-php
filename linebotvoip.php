@@ -14,7 +14,7 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาเลือกข้อมูลที่ต้องการค้นหา \n โดยเลือกหัวข้อดังนี้ :: Web, Call, ATA";
+        $arrayPostData['messages'][0]['text'] = "กรุณาเลือกข้อมูลที่ต้องการค้นหา \nโดยเลือกหัวข้อดังนี้ :: Web, Call, ATA";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -30,7 +30,7 @@
     if($message == "เบอร์โทร" || $message == "โทร" || $message == "ติดต่อ" || $message == "Call" || $message == "call"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม \n แจ้งปัญหาการใช้งาน \n ☎ ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
+        $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม \nแจ้งปัญหาการใช้งาน \n☎ ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
@@ -38,7 +38,7 @@
     if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาเลือก ATA ที่ต้องการค้นหา \n เช่น Paradox, Cisco SPA8000";
+        $arrayPostData['messages'][0]['text'] = "กรุณาเลือก ATA ที่ต้องการค้นหา\nเช่น Paradox, Cisco SPA8000";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
