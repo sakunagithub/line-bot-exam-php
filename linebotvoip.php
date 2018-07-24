@@ -46,7 +46,7 @@
     else if($message == "A1"  || $message == "a1" || $message == "ATA Paradox" || $message == "Paradox" || $message == "paradox"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "⚙ Paradox\n👉 http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
+        $arrayPostData['messages'][0]['text'] = "📝 Paradox\n📥 http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
@@ -55,7 +55,7 @@
        $message == "CiscoSPA8000" || $message == "SPA8000" || $message == "CiscoSPA8000"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "⚙ Cisco SPA8000\n👉 http://122.155.128.138/cat7045/manual/Cisco%20SPA8000/spa8000.pdf";
+        $arrayPostData['messages'][0]['text'] = "📝 Cisco SPA8000\n📥 http://122.155.128.138/cat7045/manual/Cisco%20SPA8000/spa8000.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
@@ -64,7 +64,7 @@
        $message == "CiscoSPA112" || $message == "SPA112" || $message == "CiscoSPA112"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "⚙ Cisco SPA112\n👉 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
+        $arrayPostData['messages'][0]['text'] = "📝 Cisco SPA112\n📥 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
