@@ -38,7 +38,8 @@
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\nA1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series";
+        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\nA1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series
+        \n";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
@@ -82,10 +83,17 @@
        $message == "grandstream){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Grandstream GXW-400x Series\n📥 http://http://122.155.128.138/cat7045/manual/Grandstream%20GXW-400x%20Series/Grandsteam%20HT502.pdf";
+        $arrayPostData['messages'][0]['text'] = "📝 Grandstream GXW-400x Series\n📥 http://122.155.128.138/cat7045/manual/Grandstream%20GXW-400x%20Series/Grandsteam%20HT502.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-
+            
+    #ATA HuaWei
+    else if($message == "A6" || $message == "a6" || $message == "HuaWei" || $message == "huawei" || $message == "Huawei){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "📝 HuaWei\n📥 http://122.155.128.138/cat7045/manual/HuaWei/HuaWei.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
