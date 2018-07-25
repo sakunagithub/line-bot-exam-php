@@ -38,7 +38,7 @@
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\n   A1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech_ATA172\nA8 :: Audio Codes\nA9 :: Dinstar\nA10 :: LinksysPAP2";
+        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\n   A1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech ATA172\nA8 :: Audio Codes\nA9 :: Dinstar\nA10 :: LinksysPAP2\nA11 :: Fritzbox\nA12 :: Planet VIP-157S";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A1-Paradox
@@ -110,9 +110,23 @@
     else if($message == "A10" || $message == "a10" || $message == "LinksysPAP2" || $message == "linksys"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 LinksysPAP2\n📥 hhttp://122.155.128.138/cat7045/manual/LinksysPAP2/LinksysPAP2T.pdf";
+        $arrayPostData['messages'][0]['text'] = "📝 LinksysPAP2\n📥 http://122.155.128.138/cat7045/manual/LinksysPAP2/LinksysPAP2T.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     }  
+    #A11-Fritzbox
+    else if($message == "A11" || $message == "a11" || $message == "Fritzbox" || $message == "fritzbox"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "📝 Fritzbox\n📥 http://122.155.128.138/cat7045/manual/Fritz%20Box/Fritz%20box%20config.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    #A12-Planet VIP-157S
+    else if($message == "A12" || $message == "a12" || $message == "Planet" || $message == "planet"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "📝 Planet VIP-157S\n📥 http://122.155.128.138/cat7045/manual/Planeft_245T/Planet_VIP-157S.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
 
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
