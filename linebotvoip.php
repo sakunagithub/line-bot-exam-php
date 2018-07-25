@@ -76,8 +76,16 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
+    #ATA Gran gxw400
+    else if($message == "A4" || $message == "a4" || $message == "Gran gxw400" || $message == "Grangxw400" || $message == "gxw400"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "📝 Gran gxw400\n📥 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+
     #ATA Grandstream GXW-400x Series
-    else if($message == "A5" || $message == "a5" || $message == "Grandstream" || $message == "GXW-400x" || $message == "grandstream){
+    else if($message == "A5" || $message == "a5" || $message == "Grandstream" || $message == "GXW400x" || $message == "grandstream"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "📝 Grandstream GXW-400x Series\n📥 http://122.155.128.138/cat7045/manual/Grandstream%20GXW-400x%20Series/Grandsteam%20HT502.pdf";
@@ -85,12 +93,13 @@
     } 
             
     #ATA HuaWei
-    else if($message == "A6" || $message == "a6" || $message == "HuaWei" || $message == "huawei" || $message == "Huawei){
+    else if($message == "A6" || $message == "a6" || $message == "HuaWei" || $message == "huawei" || $message == "Huawei"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "📝 HuaWei\n📥 http://122.155.128.138/cat7045/manual/HuaWei/HuaWei.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
+            
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
