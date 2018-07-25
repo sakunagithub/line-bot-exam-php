@@ -34,24 +34,22 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
-    #รายชื่อ ATA
+    #ATA
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\nA1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series
-        \n";
+        \nA6 :: HuaWei\nA7 :: Welltech_ATA172\nA8 :: Audio Codes";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-
-    #ATA Paradox
+    #A1-Paradox
     else if($message == "A1"  || $message == "a1" || $message == "ATA Paradox" || $message == "Paradox" || $message == "paradox"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "📝 Paradox\n📥 http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-
-    #ATA Cisco SPA8000
+    #A2-Cisco SPA8000
     else if($message == "A2" || $message == "a2" || $message == "ATA Cisco SPA8000" || $message == "Cisco SPA8000" || 
        $message == "CiscoSPA8000" || $message == "SPA8000" || $message == "CiscoSPA8000"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -59,16 +57,14 @@
         $arrayPostData['messages'][0]['text'] = "📝 Cisco SPA8000\n📥 http://122.155.128.138/cat7045/manual/Cisco%20SPA8000/spa8000.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-
-    #ATA Cisco SPA112
+    #A3-Cisco SPA112
     else if($message == "A3" || $message == "a3" || $message == "ATA Cisco SPA112" || $message == "Cisco SPA112" || $message == "CiscoSPA112" || $message == "SPA112" || $message == "CiscoSPA112"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "📝 Cisco SPA112\n📥 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-
-    #ATA Gran gxw400
+    #A4-Gran gxw400
     else if($message == "A4" || $message == "a4" || $message == "Gran gxw400" || $message == "Grangxw400" || $message == "gxw400"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
@@ -76,27 +72,32 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
-    #ATA Gran gxw400
-    else if($message == "A4" || $message == "a4" || $message == "Gran gxw400" || $message == "Grangxw400" || $message == "gxw400"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Gran gxw400\n📥 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
-        replyMsg($arrayHeader,$arrayPostData);
-    } 
-
-    #ATA Grandstream GXW-400x Series
+    #A5-Grandstream GXW-400x Series
     else if($message == "A5" || $message == "a5" || $message == "Grandstream" || $message == "GXW400x" || $message == "grandstream"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "📝 Grandstream GXW-400x Series\n📥 http://122.155.128.138/cat7045/manual/Grandstream%20GXW-400x%20Series/Grandsteam%20HT502.pdf";
         replyMsg($arrayHeader,$arrayPostData);
-    } 
-            
-    #ATA HuaWei
+    }            
+    #A6-HuaWei
     else if($message == "A6" || $message == "a6" || $message == "HuaWei" || $message == "huawei" || $message == "Huawei"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "📝 HuaWei\n📥 http://122.155.128.138/cat7045/manual/HuaWei/HuaWei.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    #A7-Welltech ATA172
+    else if($message == "A7" || $message == "a7" || $message == "HuaWei" || $message == "huawei" || $message == "Huawei"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "📝 Welltech ATA172\n📥 http://122.155.128.138/cat7045/manual/Welltech_ATA172/ATA172.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    #A8-Audio Codes
+    else if($message == "A8" || $message == "a8" || $message == "Audio Codes" || $message == "audio codes" || $message == "Audiocodes"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "📝 Audio Codes\n📥 http://122.155.128.138/cat7045/manual/AudioCode/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%20AudioCodes%20MP-118_FXS%20v1.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
             
