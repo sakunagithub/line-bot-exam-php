@@ -38,7 +38,7 @@
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\n   A1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech ATA172\nA8 :: Audio Codes\nA9 :: Dinstar\nA10 :: LinksysPAP2\nA11 :: Fritzbox\nA12 :: Planet VIP-157S\nA13 :: Raisecom MSG1200-GEC\nA14 :: UCM6104";
+        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\n   A1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech ATA172\nA8 :: Audio Codes\nA9 :: Dinstar\nA10 :: LinksysPAP2\nA11 :: Fritzbox\nA12 :: Planet VIP-157S\nA13 :: Raisecom MSG1200-GEC\nA14 :: UCM6104\nA15 :: Grandstream HT 702";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A1-Paradox
@@ -70,7 +70,6 @@
         $arrayPostData['messages'][0]['text'] = "📝 Gran gxw400\n📥 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-
     #A5-Grandstream GXW-400x Series
     else if($message == "A5" || $message == "a5" || $message == "Grandstream" || $message == "GXW400x" || $message == "grandstream"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -139,6 +138,13 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "📝 UCM6104\n📥 http://122.155.128.138/cat7045/manual/UCM6104/ucm%201604to%20cat.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    #A15-Grandstream HT 702
+    else if($message == "A15"  || $message == "a15" || $message == "HT 702" || $message == "HT702" || $message == "ht702"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "📝 Grandstream HT 702\n📥 http://122.155.128.138/cat7045/manual/ATA%20HT%20702/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%20ATA%20HT%20702.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
