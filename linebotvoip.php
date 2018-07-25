@@ -38,7 +38,7 @@
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\n   A1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech_ATA172\nA8 :: Audio Codes\nA9 :: Dinstar";
+        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\n   A1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech_ATA172\nA8 :: Audio Codes\nA9 :: Dinstar\nA10 :: LinksysPAP2";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A1-Paradox
@@ -104,6 +104,13 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "📝 Dinstar\n📥 http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    }  
+    #A10-LinksysPAP2
+    else if($message == "A10" || $message == "a10" || $message == "LinksysPAP2" || $message == "linksys"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "📝 LinksysPAP2\n📥 hhttp://122.155.128.138/cat7045/manual/LinksysPAP2/LinksysPAP2T.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     }  
 
