@@ -38,7 +38,7 @@
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\nA1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400";
+        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\nA1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
@@ -77,6 +77,14 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
+    #ATA Grandstream GXW-400x Series
+    else if($message == "A5" || $message == "a5" || $message == "Grandstream" || $message == "GXW-400x" || 
+       $message == "grandstream){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "📝 Grandstream GXW-400x Series\n📥 http://http://122.155.128.138/cat7045/manual/Grandstream%20GXW-400x%20Series/Grandsteam%20HT502.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
 
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
