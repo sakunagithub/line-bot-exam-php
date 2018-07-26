@@ -152,16 +152,24 @@
     else if($message == "IP Phone" || $message == "IP" || $message == "ip" || $message == "phone" || $message == "Phone"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ IP Phone ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nP1 :: Planet ICF-1700";
+        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ IP Phone ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nP1 :: Planet ICF-1700\nP2 :: Planeft 245T";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #P1-Planet ICF-1700
     else if($message == "P1"  || $message == "p1" || $message == "Planet" || $message == "planet"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "P1-Planet ICF-1700 ::\n🌏 http://122.155.128.138/cat7045/manual/Planet%20ICF-1700/IP%E2%80%93PHONE%20Planet%20ICF-1700.pdf";
+        $arrayPostData['messages'][0]['text'] = "Planet ICF-1700 ::\n🌏 http://122.155.128.138/cat7045/manual/Planet%20ICF-1700/IP%E2%80%93PHONE%20Planet%20ICF-1700.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
+    #P2-Planeft 245T
+    else if($message == "P2"  || $message == "p2" || $message == "Planeft" || $message == "planeft"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "Planeft 245T ::\n🌏 http://122.155.128.138/cat7045/manual/Planeft_245T/Planet%20Phone%20VIP-254T.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
