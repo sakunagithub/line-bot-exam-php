@@ -14,7 +14,7 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "กรุณาเลือกข้อมูลที่ต้องการค้นหา โดยพิมพ์ตัวเลือกดังนี้...\n🌏 Web :: เรียกดูข้อมูล Support อื่นๆ\n☎ Call :: เรียกดูเบอร์ Support\n📕 ATA :: ดาวน์โหลดคู่มือการตั้งค่า ATA";
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา โดยพิมพ์ตัวเลือกดังนี้...\n🌏 Web :: เรียกดูข้อมูล Support อื่นๆ\n☎ Call :: เรียกดูเบอร์ Support\n📕 ATA :: ดาวน์โหลดคู่มือการตั้งค่า ATA";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -38,7 +38,7 @@
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📥 กรุณาเลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\nA1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech ATA172\nA8 :: Audio Codes\nA9 :: Dinstar\nA10 :: LinksysPAP2\nA11 :: Fritzbox\nA12 :: Planet VIP-157S\nA13 :: Raisecom MSG1200-GEC\nA14 :: UCM6104\nA15 :: Grandstream HT 702";
+        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ ATA ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\nA1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech ATA172\nA8 :: Audio Codes\nA9 :: Dinstar\nA10 :: LinksysPAP2\nA11 :: Fritzbox\nA12 :: Planet VIP-157S\nA13 :: Raisecom MSG1200-GEC\nA14 :: UCM6104\nA15 :: Grandstream HT 702";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A1-Paradox
@@ -148,6 +148,20 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
+    #IP Phone
+    else if($message == "IP Phone" || $message == "IP" || $message == "ip" || $message == "phone" || $message == "Phone"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ IP Phone ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\nP1 :: Planet ICF-1700\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech ATA172\nA8 :: Audio Codes\nA9 :: Dinstar\nA10 :: LinksysPAP2\nA11 :: Fritzbox\nA12 :: Planet VIP-157S\nA13 :: Raisecom MSG1200-GEC\nA14 :: UCM6104\nA15 :: Grandstream HT 702";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    #P1-Planet ICF-1700
+    else if($message == "P1"  || $message == "p1" || $message == "Planet" || $message == "planet"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "P1-Planet ICF-1700 ::\nhttp://122.155.128.138/cat7045/manual/Planet%20ICF-1700/IP%E2%80%93PHONE%20Planet%20ICF-1700.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
