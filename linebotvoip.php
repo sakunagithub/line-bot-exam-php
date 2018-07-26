@@ -152,7 +152,7 @@
     else if($message == "IP Phone" || $message == "IP" || $message == "ip" || $message == "phone" || $message == "Phone"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ IP Phone ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nP1 :: Planet ICF-1700\nP2 :: Planeft 245T";
+        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ IP Phone ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nP1 :: Planet ICF-1700\nP2 :: Planeft 245T\nP3 :: Yealink SIP T20";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #P1-Planet ICF-1700
@@ -169,6 +169,14 @@
         $arrayPostData['messages'][0]['text'] = "Planeft 245T\n🌏 http://122.155.128.138/cat7045/manual/Planeft_245T/Planet%20Phone%20VIP-254T.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     }
+    #P3-Yealink SIP T20
+    else if($message == "P3"  || $message == "p3" || $message == "Yealink" || $message == "yalink"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "Yealink SIP T20\n🌏 http://122.155.128.138/cat7045/manual/Yealink_SIP_T20/SIP-T20.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
 
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
