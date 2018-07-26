@@ -14,7 +14,7 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา โดยพิมพ์ตัวเลือกดังนี้...\n🌏 Web :: เรียกดูข้อมูล Support อื่นๆ\n☎ Call :: เรียกดูเบอร์ Support\n📕 ATA :: ดาวน์โหลดคู่มือการตั้งค่า ATA";
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา โดยพิมพ์ตัวเลือกดังนี้...\nWeb :: เรียกดูข้อมูล Support อื่นๆ\nCall :: เรียกดูเบอร์ Support\nATA :: ดาวน์โหลดคู่มือการตั้งค่า ATA\nIP :: ดาวน์โหลดคู่มือการตั้งค่า IP Phone";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -45,7 +45,7 @@
     else if($message == "A1"  || $message == "a1" || $message == "ATA Paradox" || $message == "Paradox" || $message == "paradox"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Paradox\n📥 http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
+        $arrayPostData['messages'][0]['text'] = "Paradox ::\n🌏 http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A2-Cisco SPA8000
@@ -53,98 +53,98 @@
        $message == "CiscoSPA8000" || $message == "SPA8000" || $message == "CiscoSPA8000"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Cisco SPA8000\n📥 http://122.155.128.138/cat7045/manual/Cisco%20SPA8000/spa8000.pdf";
+        $arrayPostData['messages'][0]['text'] = "Cisco SPA8000 ::\n🌏 http://122.155.128.138/cat7045/manual/Cisco%20SPA8000/spa8000.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A3-Cisco SPA112
     else if($message == "A3" || $message == "a3" || $message == "ATA Cisco SPA112" || $message == "Cisco SPA112" || $message == "CiscoSPA112" || $message == "SPA112" || $message == "CiscoSPA112"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Cisco SPA112\n📥 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
+        $arrayPostData['messages'][0]['text'] = "Cisco SPA112 ::\n🌏 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A4-Gran gxw400
     else if($message == "A4" || $message == "a4" || $message == "Gran gxw400" || $message == "Grangxw400" || $message == "gxw400"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Gran gxw400\n📥 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
+        $arrayPostData['messages'][0]['text'] = "Gran gxw400 ::\n🌏 http://122.155.128.138/cat7045/manual/CiscoSPA112/CISCO%20SPA%20112.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A5-Grandstream GXW-400x Series
     else if($message == "A5" || $message == "a5" || $message == "Grandstream" || $message == "GXW400x" || $message == "grandstream"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Grandstream GXW-400x Series\n📥 http://122.155.128.138/cat7045/manual/Grandstream%20GXW-400x%20Series/Grandsteam%20HT502.pdf";
+        $arrayPostData['messages'][0]['text'] = "Grandstream GXW-400x Series ::\n🌏 http://122.155.128.138/cat7045/manual/Grandstream%20GXW-400x%20Series/Grandsteam%20HT502.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     }            
     #A6-HuaWei
     else if($message == "A6" || $message == "a6" || $message == "HuaWei" || $message == "huawei" || $message == "Huawei"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 HuaWei\n📥 http://122.155.128.138/cat7045/manual/HuaWei/HuaWei.pdf";
+        $arrayPostData['messages'][0]['text'] = "HuaWei ::\n🌏 http://122.155.128.138/cat7045/manual/HuaWei/HuaWei.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A7-Welltech ATA172
     else if($message == "A7" || $message == "a7" || $message == "Welltech ATA172" || $message == "ATA172" || $message == "Welltech"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Welltech ATA172\n📥 http://122.155.128.138/cat7045/manual/Welltech_ATA172/ATA172.pdf";
+        $arrayPostData['messages'][0]['text'] = "Welltech ATA172 ::\n🌏 http://122.155.128.138/cat7045/manual/Welltech_ATA172/ATA172.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A8-Audio Codes
     else if($message == "A8" || $message == "a8" || $message == "Audio Codes" || $message == "audio codes" || $message == "Audiocodes"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Audio Codes\n📥 http://122.155.128.138/cat7045/manual/AudioCode/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%20AudioCodes%20MP-118_FXS%20v1.pdf";
+        $arrayPostData['messages'][0]['text'] = "Audio Codes ::\n🌏 http://122.155.128.138/cat7045/manual/AudioCode/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99%20AudioCodes%20MP-118_FXS%20v1.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A9-Dinstar
     else if($message == "A9" || $message == "a9" || $message == "Dinstar" || $message == "dinstar"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Dinstar\n📥 http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
+        $arrayPostData['messages'][0]['text'] = "Dinstar ::\n🌏 http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     }  
     #A10-LinksysPAP2
     else if($message == "A10" || $message == "a10" || $message == "LinksysPAP2" || $message == "linksys"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 LinksysPAP2\n📥 http://122.155.128.138/cat7045/manual/LinksysPAP2/LinksysPAP2T.pdf";
+        $arrayPostData['messages'][0]['text'] = "LinksysPAP2 ::\n🌏 http://122.155.128.138/cat7045/manual/LinksysPAP2/LinksysPAP2T.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     }  
     #A11-Fritzbox
     else if($message == "A11" || $message == "a11" || $message == "Fritzbox" || $message == "fritzbox"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Fritzbox\n📥 http://122.155.128.138/cat7045/manual/Fritz%20Box/Fritz%20box%20config.pdf";
+        $arrayPostData['messages'][0]['text'] = "Fritzbox ::\n🌏 http://122.155.128.138/cat7045/manual/Fritz%20Box/Fritz%20box%20config.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A12-Planet VIP-157S
     else if($message == "A12" || $message == "a12" || $message == "Planet" || $message == "planet"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Planet VIP-157S\n📥 http://122.155.128.138/cat7045/manual/Planeft_245T/Planet_VIP-157S.pdf";
+        $arrayPostData['messages'][0]['text'] = "Planet VIP-157S ::\n🌏 http://122.155.128.138/cat7045/manual/Planeft_245T/Planet_VIP-157S.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A13-Raisecom MSG1200-GEC
     else if($message == "A13" || $message == "a13" || $message == "Raisecom" || $message == "raisecom"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Raisecom MSG1200-GEC\n📥 http://122.155.128.138/cat7045/manual/Raisecom%20MSG1200-GEC/Raisecom%20MSG1200-GEC_ver2.pdf";
+        $arrayPostData['messages'][0]['text'] = "Raisecom MSG1200-GEC ::\n🌏 http://122.155.128.138/cat7045/manual/Raisecom%20MSG1200-GEC/Raisecom%20MSG1200-GEC_ver2.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A14-UCM6104
     else if($message == "A14" || $message == "a14" || $message == "UCM6104" || $message == "ucm6104"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 UCM6104\n📥 http://122.155.128.138/cat7045/manual/UCM6104/ucm%201604to%20cat.pdf";
+        $arrayPostData['messages'][0]['text'] = "UCM6104 ::\n🌏 http://122.155.128.138/cat7045/manual/UCM6104/ucm%201604to%20cat.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #A15-Grandstream HT 702
     else if($message == "A15"  || $message == "a15" || $message == "HT 702" || $message == "HT702" || $message == "ht702"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "📝 Grandstream HT 702\n📥 http://122.155.128.138/cat7045/manual/ATA%20HT%20702/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%20ATA%20HT%20702.pdf";
+        $arrayPostData['messages'][0]['text'] = "Grandstream HT 702 ::\n🌏 http://122.155.128.138/cat7045/manual/ATA%20HT%20702/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%20ATA%20HT%20702.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
@@ -152,14 +152,14 @@
     else if($message == "IP Phone" || $message == "IP" || $message == "ip" || $message == "phone" || $message == "Phone"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ IP Phone ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\nP1 :: Planet ICF-1700\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech ATA172\nA8 :: Audio Codes\nA9 :: Dinstar\nA10 :: LinksysPAP2\nA11 :: Fritzbox\nA12 :: Planet VIP-157S\nA13 :: Raisecom MSG1200-GEC\nA14 :: UCM6104\nA15 :: Grandstream HT 702";
+        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ IP Phone ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\nP1 :: Planet ICF-1700";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #P1-Planet ICF-1700
     else if($message == "P1"  || $message == "p1" || $message == "Planet" || $message == "planet"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "P1-Planet ICF-1700 ::\nhttp://122.155.128.138/cat7045/manual/Planet%20ICF-1700/IP%E2%80%93PHONE%20Planet%20ICF-1700.pdf";
+        $arrayPostData['messages'][0]['text'] = "P1-Planet ICF-1700 ::\n🌏 http://122.155.128.138/cat7045/manual/Planet%20ICF-1700/IP%E2%80%93PHONE%20Planet%20ICF-1700.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 function replyMsg($arrayHeader,$arrayPostData){
