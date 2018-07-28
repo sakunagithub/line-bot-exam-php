@@ -45,6 +45,17 @@
         $arrayPostData['messages'][2]['text'] = "ค่าใช้บริการโทรปลายทางภายในประเทศ\n\n- เรียกติดต่อภายในโครงข่าย CAT 1 บาท/นาที\n- เรียกข้ามโครงข่ายไปยัง Fixed และ Mobile 2 บาท/นาที\n- เรียกภายในพื้นที่จังหวัดเดียวกัน (Local Call) 3 บาท/ครั้ง";
         replyMsg($arrayHeader,$arrayPostData);
     } 
+    #บริการ hosted PBX
+    else if($message == "S2" || $message == "s2" || $message == "hosted PBX" || $message == "Hosted" || $message == "hosted"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "บริการ hosted PBX...";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "ลักษณะบริการ\n\nเป็นบริการให้เช่าระบบตู้สาขาโทรศัพท์ผ่านโครงข่ายอินเทอร์เน็ตที่ได้รับการออกแบบมาเพื่อใช้งานทดแทนตู้สาขา (PABX) โดยที่ผู้ใช้บริการไม่ต้องลงทุนติดตั้งตู้สาขา ทำให้สามารถลดค่าใช้จ่ายในการจัดซื้อและการบำรุงรักษา ซึ่งสามารถใช้งานได้เทียบเท่ากับตู้สาขา ไม่ว่าจะเป็นการติดต่อกัน โดยใช้หมายเลขภายใน (Extension Number) การโทรออกไปยังปลายทางอื่นๆ การโอนสาย การดึงสาย การพักสาย รวมไปถึงระบบเสียงตอบรับอัตโนมัติ IVR (Interactive Voice Response) หรือ Auto-Attendant ผู้ใช้บริการเพียงแค่มีอุปกรณ์สำหรับใช้งาน VoIP เช่น IP phone หรือ Internet phone adapter โดยทำการเชื่อมต่อกับระบบ CAT hosted PBX ผ่านวงจร IP Network หรือวงจรอินเทอร์เน็ตของผู้ให้บริการรายใดก็ได้";
+        $arrayPostData['messages'][2]['type'] = "text";
+        $arrayPostData['messages'][2]['text'] = "รูปแบบการใช้งาน\n\n- รูปแบบที่ 1 เรียกเข้าระบบด้วยเลขหมายแบบ DID\nผู้โทรสามารถโทรเข้าหาหมายเลขภายในได้โดยตรง โดยไม่ต้องผ่านพนักงาน หรือระบบเสียงตอบรับ เช่น กด 021044764\n\n- รูปแบบที่ 2 เรียกเข้าระบบผ่าน Auto Attendant หรือ IVR\nทุกสายที่เรียกเข้าจะติดระบบเสียงตอบรับอัตโนมัติก่อนจากนั้นจึงกดต่อหมายเลขภายในที่ต้องการ\n\n- รูปแบบที่ 3 เรียกเข้าระบบผ่านพนักงานสลับสาย (Operator)\nทุกสายที่เรียกเข้าจะติดที่ Operator ก่อน จากนั้น Operator จะเป็นผู้โอนสายไปยังหมายเลขภายในที่ต้องการติดต่ออีกครั้ง";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
 
     #ATA
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
