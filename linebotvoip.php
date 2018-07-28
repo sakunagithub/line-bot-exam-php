@@ -37,9 +37,9 @@
     else if($message == "001" || $message == "009"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "001...\n\nเป็นบริการโทรศัพท์ระหว่างประเทศระบบเรียกตรงอัตโนมัติ หรือ IDD (International Direct Dialing) ด้วยรหัส 001  โทรติดง่าย คุณภาพเสียงคมชัด ไม่มีเสียงรบกวน สัญญานเสียง ไม่ดีเลย์ แสดงเลขหมายต้นทาง (โชว์ CLI) และใช้ส่งแฟกซ์ได้อย่างมีประสิทธิภาพ สามารถเรียกใช้บริการได้จากโทรศัพท์พื้นฐานและโทรศัพท์มือถือทุกเครือข่าย บริการครอบคลุม 233 ปลายทางทั่วโลก";
+        $arrayPostData['messages'][0]['text'] = "CAT 001\n\nเป็นบริการโทรศัพท์ระหว่างประเทศระบบเรียกตรงอัตโนมัติ หรือ IDD (International Direct Dialing) ด้วยรหัส 001  โทรติดง่าย คุณภาพเสียงคมชัด ไม่มีเสียงรบกวน สัญญานเสียง ไม่ดีเลย์ แสดงเลขหมายต้นทาง (โชว์ CLI) และใช้ส่งแฟกซ์ได้อย่างมีประสิทธิภาพ สามารถเรียกใช้บริการได้จากโทรศัพท์พื้นฐานและโทรศัพท์มือถือทุกเครือข่าย บริการครอบคลุม 233 ปลายทางทั่วโลก";
         $arrayPostData['messages'][1]['type'] = "text";
-        $arrayPostData['messages'][1]['text'] = "009...\n\nเป็นบริการโทรศัพท์ระหว่างประเทศระบบเรียกตรงอัตโนมัติ หรือ IDD (International Direct Dialing)  ด้วยรหัส 009 ราคาประหยัด สามารถเรียกใช้บริการได้จากโทรศัพท์พื้นฐานและโทรศัพท์มือถือทุกเครือข่าย บริการครอบคลุม 233 ปลายทางทั่วโลก";
+        $arrayPostData['messages'][1]['text'] = "CAT 009\n\nเป็นบริการโทรศัพท์ระหว่างประเทศระบบเรียกตรงอัตโนมัติ หรือ IDD (International Direct Dialing)  ด้วยรหัส 009 ราคาประหยัด สามารถเรียกใช้บริการได้จากโทรศัพท์พื้นฐานและโทรศัพท์มือถือทุกเครือข่าย บริการครอบคลุม 233 ปลายทางทั่วโลก";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
@@ -47,7 +47,7 @@
     else if($message == "S1" || $message == "s1" || $message == "One" || $message == "one" || $message == "one-connect"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "บริการ One Connect...";
+        $arrayPostData['messages'][0]['text'] = "บริการ One Connect";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ลักษณะบริการ\n\nเป็นบริการโทรศัพท์พื้นฐานหรือโทรศัพท์ประจำที่ (Fixed Line) ที่เชื่อมต่อตรงจากชุมสายโทรศัพท์ของ CAT ถึงสถานที่ติดตั้งของผู้ใช้บริการ มีคุณภาพเสียงคมชัด สามารถโทรปลายทางในประเทศและต่างประเทศได้ในราคาประหยัด เหมาะสำหรับองค์กรทั้งขนาดเล็กและขนาดใหญ่ โดยมีรูปแบบวงจรเชื่อมต่อทั้งแบบ Analog Line, ISDN-BRI และ ISDN-PRI (E1) 30 ช่องสัญญาณ/วงจร";
         $arrayPostData['messages'][2]['type'] = "text";
@@ -58,7 +58,7 @@
     else if($message == "S2" || $message == "s2" || $message == "hosted PBX" || $message == "Hosted" || $message == "hosted"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "บริการ hosted PBX...";
+        $arrayPostData['messages'][0]['text'] = "บริการ hosted PBX";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ลักษณะบริการ\n\nเป็นบริการให้เช่าระบบตู้สาขาโทรศัพท์ผ่านโครงข่ายอินเทอร์เน็ตที่ได้รับการออกแบบมาเพื่อใช้งานทดแทนตู้สาขา (PABX) โดยที่ผู้ใช้บริการไม่ต้องลงทุนติดตั้งตู้สาขา ทำให้สามารถลดค่าใช้จ่ายในการจัดซื้อและการบำรุงรักษา ซึ่งสามารถใช้งานได้เทียบเท่ากับตู้สาขา ไม่ว่าจะเป็นการติดต่อกัน โดยใช้หมายเลขภายใน (Extension Number) การโทรออกไปยังปลายทางอื่นๆ การโอนสาย การดึงสาย การพักสาย รวมไปถึงระบบเสียงตอบรับอัตโนมัติ IVR (Interactive Voice Response) หรือ Auto-Attendant ผู้ใช้บริการเพียงแค่มีอุปกรณ์สำหรับใช้งาน VoIP เช่น IP phone หรือ Internet phone adapter โดยทำการเชื่อมต่อกับระบบ CAT hosted PBX ผ่านวงจร IP Network หรือวงจรอินเทอร์เน็ตของผู้ให้บริการรายใดก็ได้";
         $arrayPostData['messages'][2]['type'] = "text";
@@ -69,7 +69,7 @@
     else if($message == "S3" || $message == "s3" || $message == "SIP" || $message == "Sip" || $message == "sip connect"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "บริการ SIP Connect...";
+        $arrayPostData['messages'][0]['text'] = "บริการ SIP Connect";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ลักษณะบริการ\n\nเป็นบริการโทรศัพท์ผ่านโครงข่ายอินเทอร์เน็ต Voice over Internet Protocol (VoIP) ในรูปแบบ SIP Trunk ที่เชื่อมต่อระหว่าง SIP Server, IP PBX หรือ อุปกรณ์ Voice Gateway ของผู้ใช้บริการกับ VoIP Server ของ CAT โดยสามารถใช้งานร่วมกับวงจร IP Network ต่างๆ หรือร่วมกับวงจรอินเทอร์เน็ตของผู้ให้บริการรายใดก็ได้ สามารถเลือกใช้เลขหมายเดี่ยว หรือเลขหมายแบบ DID ตามพื้นที่ที่ต้องการใช้งานเพื่อใช้ติดต่อเรียกเข้าออกทั้งภายในประเทศและระหว่างประเทศ";
         replyMsg($arrayHeader,$arrayPostData);
@@ -78,7 +78,7 @@
     else if($message == "S4" || $message == "s4" || $message == "Fax2Email" || $message == "fax2email" || $message == "Fax2"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "บริการ SIP Connect...";
+        $arrayPostData['messages'][0]['text'] = "บริการ Fax2Email";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ลักษณะบริการ\n\nFax2email เป็นการติดต่อระหว่าง Fax กับ email โดยด้านหนึ่งใช้สายโทรศัพท์ต่อกับเครื่อง Fax กับอีกด้านหนึ่งใช้เลขหมายโทรศัพท์แบบไม่ต้องมีสายและรับด้วย email\nเมื่อมี Fax ส่งเข้ามา จะได้รับข้อมูลเป็นไฟล์แนบในรูปแบบ PDF ทาง email\nในทางกลับกัน หากต้องการส่ง Fax ไปยังอีกด้านหนึ่งที่ใช้เครื่อง Fax ก็เพียงส่งจาก email โดยส่งไปที่ email address ที่กำหนดไว้เฉพาะสำหรับผู้ใช้บริการ Fax2email แต่ละราย\nซึ่งจะมีรูปแบบเป็น 0xxxxxxxx@fax2email.cattelecom.com (0xxxxxxxx คือเลขหมายโทรศัพท์ของผู้ใช้บริการ) และให้ใส่ชื่อเรื่อง (Subject) เป็นเลขหมาย Fax ปลายทางที่ต้องการจะส่ง พร้อมทั้งแนบไฟล์เอกสารที่ต้องการส่งในรูปแบบ PDF ซึ่งระบบ Fax2email จะทำการแปลงไฟล์เอกสารแนบนั้น ส่งไปที่เครื่อง Fax ปลายทางอัตโนมัติ";
         $arrayPostData['messages'][2]['type'] = "text";
