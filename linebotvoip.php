@@ -34,11 +34,11 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
-    #บริการ one-connect
+    #บริการ One Connect
     else if($message == "S1" || $message == "s1" || $message == "One" || $message == "one" || $message == "one-connect"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "บริการ one-connect...";
+        $arrayPostData['messages'][0]['text'] = "บริการ One Connect...";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ลักษณะบริการ\n\nเป็นบริการโทรศัพท์พื้นฐานหรือโทรศัพท์ประจำที่ (Fixed Line) ที่เชื่อมต่อตรงจากชุมสายโทรศัพท์ของ CAT ถึงสถานที่ติดตั้งของผู้ใช้บริการ มีคุณภาพเสียงคมชัด สามารถโทรปลายทางในประเทศและต่างประเทศได้ในราคาประหยัด เหมาะสำหรับองค์กรทั้งขนาดเล็กและขนาดใหญ่ โดยมีรูปแบบวงจรเชื่อมต่อทั้งแบบ Analog Line, ISDN-BRI และ ISDN-PRI (E1) 30 ช่องสัญญาณ/วงจร";
         $arrayPostData['messages'][2]['type'] = "text";
@@ -56,6 +56,16 @@
         $arrayPostData['messages'][2]['text'] = "รูปแบบการใช้งาน\n\n- รูปแบบที่ 1 เรียกเข้าระบบด้วยเลขหมายแบบ DID\nผู้โทรสามารถโทรเข้าหาหมายเลขภายในได้โดยตรง โดยไม่ต้องผ่านพนักงาน หรือระบบเสียงตอบรับ เช่น กด 021044764\n\n- รูปแบบที่ 2 เรียกเข้าระบบผ่าน Auto Attendant หรือ IVR\nทุกสายที่เรียกเข้าจะติดระบบเสียงตอบรับอัตโนมัติก่อนจากนั้นจึงกดต่อหมายเลขภายในที่ต้องการ\n\n- รูปแบบที่ 3 เรียกเข้าระบบผ่านพนักงานสลับสาย (Operator)\nทุกสายที่เรียกเข้าจะติดที่ Operator ก่อน จากนั้น Operator จะเป็นผู้โอนสายไปยังหมายเลขภายในที่ต้องการติดต่ออีกครั้ง";
         replyMsg($arrayHeader,$arrayPostData);
     } 
+    #บริการ SIP Connect
+    else if($message == "S3" || $message == "s3" || $message == "SIP" || $message == "Sip" || $message == "sip connect"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "บริการ SIP Connect...";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "ลักษณะบริการ\n\nเป็นบริการโทรศัพท์ผ่านโครงข่ายอินเทอร์เน็ต Voice over Internet Protocol (VoIP) ในรูปแบบ SIP Trunk ที่เชื่อมต่อระหว่าง SIP Server, IP PBX หรือ อุปกรณ์ Voice Gateway ของผู้ใช้บริการกับ VoIP Server ของ CAT โดยสามารถใช้งานร่วมกับวงจร IP Network ต่างๆ หรือร่วมกับวงจรอินเทอร์เน็ตของผู้ให้บริการรายใดก็ได้ สามารถเลือกใช้เลขหมายเดี่ยว หรือเลขหมายแบบ DID ตามพื้นที่ที่ต้องการใช้งานเพื่อใช้ติดต่อเรียกเข้าออกทั้งภายในประเทศและระหว่างประเทศ";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+
 
     #ATA
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
