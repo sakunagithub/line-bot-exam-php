@@ -65,7 +65,19 @@
         $arrayPostData['messages'][1]['text'] = "ลักษณะบริการ\n\nเป็นบริการโทรศัพท์ผ่านโครงข่ายอินเทอร์เน็ต Voice over Internet Protocol (VoIP) ในรูปแบบ SIP Trunk ที่เชื่อมต่อระหว่าง SIP Server, IP PBX หรือ อุปกรณ์ Voice Gateway ของผู้ใช้บริการกับ VoIP Server ของ CAT โดยสามารถใช้งานร่วมกับวงจร IP Network ต่างๆ หรือร่วมกับวงจรอินเทอร์เน็ตของผู้ให้บริการรายใดก็ได้ สามารถเลือกใช้เลขหมายเดี่ยว หรือเลขหมายแบบ DID ตามพื้นที่ที่ต้องการใช้งานเพื่อใช้ติดต่อเรียกเข้าออกทั้งภายในประเทศและระหว่างประเทศ";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-
+    #บริการ Fax2Email
+    else if($message == "S4" || $message == "s4" || $message == "Fax2Email" || $message == "fax2email" || $message == "Fax2"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "บริการ SIP Connect...";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "ลักษณะบริการ\n\nFax2email เป็นการติดต่อระหว่าง Fax กับ email โดยด้านหนึ่งใช้สายโทรศัพท์ต่อกับเครื่อง Fax กับอีกด้านหนึ่งใช้เลขหมายโทรศัพท์แบบไม่ต้องมีสายและรับด้วย email\nเมื่อมี Fax ส่งเข้ามา จะได้รับข้อมูลเป็นไฟล์แนบในรูปแบบ PDF ทาง email\nในทางกลับกัน หากต้องการส่ง Fax ไปยังอีกด้านหนึ่งที่ใช้เครื่อง Fax ก็เพียงส่งจาก email โดยส่งไปที่ email address ที่กำหนดไว้เฉพาะสำหรับผู้ใช้บริการ Fax2email แต่ละราย\nซึ่งจะมีรูปแบบเป็น 0xxxxxxxx@fax2email.cattelecom.com (0xxxxxxxx คือเลขหมายโทรศัพท์ของผู้ใช้บริการ) และให้ใส่ชื่อเรื่อง (Subject) เป็นเลขหมาย Fax ปลายทางที่ต้องการจะส่ง พร้อมทั้งแนบไฟล์เอกสารที่ต้องการส่งในรูปแบบ PDF ซึ่งระบบ Fax2email จะทำการแปลงไฟล์เอกสารแนบนั้น ส่งไปที่เครื่อง Fax ปลายทางอัตโนมัติ";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "วิธีการใช้งาน\n\n- ใช้โปรแกรม email ส่งไปที่ email address ที่ CAT กำหนดไว้เฉพาะสำหรับผู้ใช้บริการ Fax2email แต่ละราย ซึ่งจะมีรูปแบบเป็น 0xxxxxxxx@fax2email.cattelecom.com  และให้ใส่ชื่อเรื่อง (Subject) เป็นเลขหมาย Fax ปลายทางที่ต้องการจะส่ง พร้อมทั้งแนบ PDF file ไป\n- กรณีต้องการส่งเอกสารไปยังปลายทางที่เป็นเครื่อง Fax ให้แปลงเอกสารเป็น PDF file (ขนาดไม่เกิน 5 MB) และตั้งชื่อไฟล์เป็นภาษาอังกฤษ";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "อัตราค่าใช้บริการ\n\n- เริ่มต้นขั้นต่ำที่ 2 ช่องสัญญาณ/เลขหมาย\n- ค่าเช่ารายเดือน 200 บาท/เดือน/2 ช่องสัญญาณ/เลขหมาย\n- เพิ่มช่องสัญญาณ คิดค่าใช้บริการเพิ่ม 100 บาท/เดือน/ช่องสัญญาณ/เลขหมาย\n- ไม่มีค่าใช้บริการในส่วนการรับ Fax เข้า\n-การส่ง Fax ออกจะคิดค่าใช้บริการ ดังนี้\n  หมายเลขภายในจังหวัดเดียวกัน 3 บาท/ครั้ง\n  หมายเลขต่างจังหวัด 1 บาท/นาที";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
 
     #ATA
     else if($message == "ATA" || $message == "Ata" || $message == "ata"){
