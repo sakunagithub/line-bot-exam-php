@@ -33,7 +33,16 @@
         $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม แจ้งปัญหาการใช้งาน\n☎ ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-    
+    #001,009
+    else if($message == "001" || $message == "009"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "001...\n\nเป็นบริการโทรศัพท์ระหว่างประเทศระบบเรียกตรงอัตโนมัติ หรือ IDD (International Direct Dialing) ด้วยรหัส 001  โทรติดง่าย คุณภาพเสียงคมชัด ไม่มีเสียงรบกวน สัญญานเสียง ไม่ดีเลย์ แสดงเลขหมายต้นทาง (โชว์ CLI) และใช้ส่งแฟกซ์ได้อย่างมีประสิทธิภาพ สามารถเรียกใช้บริการได้จากโทรศัพท์พื้นฐานและโทรศัพท์มือถือทุกเครือข่าย บริการครอบคลุม 233 ปลายทางทั่วโลก";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "009...\n\nเป็นบริการโทรศัพท์ระหว่างประเทศระบบเรียกตรงอัตโนมัติ หรือ IDD (International Direct Dialing)  ด้วยรหัส 009 ราคาประหยัด สามารถเรียกใช้บริการได้จากโทรศัพท์พื้นฐานและโทรศัพท์มือถือทุกเครือข่าย บริการครอบคลุม 233 ปลายทางทั่วโลก";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+
     #บริการ One Connect
     else if($message == "S1" || $message == "s1" || $message == "One" || $message == "one" || $message == "one-connect"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
