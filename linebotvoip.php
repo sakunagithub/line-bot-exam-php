@@ -14,8 +14,7 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลือกดังนี้...\n\n- Servic :: ข้อมูลบริการ CAT Voice\n- Web :: เรียกดูข้อมูล Support อื่นๆ\n- Call :: เรียกดูเบอร์ Support\n- ATA :: ดาวน์โหลดคู่มือการตั้งค่า ATA\n- IP :: ดาวน์โหลดคู่มือการตั้งค่า IP Phone";
-        replyMsg($arrayHeader,$arrayPostData);
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลือกดังนี้...\n\nServic :: ข้อมูลบริการ CAT Voice\nWeb :: ข้อมูล Support อื่นๆ\nCall :: เรียกดูเบอร์ Support\nATA :: ดาวน์โหลดคู่มือการตั้งค่า ATA\nIP :: ดาวน์โหลดคู่มือการตั้งค่า IP Phone";        replyMsg($arrayHeader,$arrayPostData);
     }
 
     #ลิงค์เว็บ
@@ -41,7 +40,7 @@
     else if($message == "Voice" || $message == "voice" || $message == "Service" || $message == "service"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมููลบริการที่ต้องการค้นหา\nโดยพิมพ์ตัวเลือกดังนี้...\n\nS1 :: CAT 001,009\nS2 :: One Connect\nS3 :: Hosted PBX\nS4 :: SIP Connect\nS5 :: Fax2Email\nA6 :: CAT2call plus\n  (postpaid, prepaid)";
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมููลบริการที่ต้องการค้นหา\nโดยพิมพ์ตัวเลือกดังนี้...\n\nS1 :: CAT 001,009\nS2 :: One Connect\nS3 :: Hosted PBX\nS4 :: SIP Connect\nS5 :: Fax2Email\nS6 :: CAT2call plus (postpaid, prepaid)";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #001,009
