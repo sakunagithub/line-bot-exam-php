@@ -93,7 +93,7 @@
     else if($message == "S5" || $message == "s5" ||$message == "เติมเงิน" || $message == "รายเดือน" || $message == "postpaid" || $message == "prepaid"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "CAT2call plus postpaid (แบบรายเดือน)\n\nสมัครใช้บริการได้ที่\nสำนักงานบริการลูกค้า CAT ทั่วประเทศ";
+        $arrayPostData['messages'][0]['text'] = "CAT2call plus postpaid (แบบรายเดือน)\n\nสมัครใช้บริการได้ที่\n- สำนักงานบริการลูกค้า CAT ทั่วประเทศ";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "CAT2call plus prepaid (แบบเติมเงิน)\n\nสมัครใช้บริการได้ที่\n- ผ่านทางเว็ปไซต์ link.catnextgen.com (ชำระผ่านบัตรเครดิต)\n- ผ่านทางเว็ปไซต์ CAT shopping (ชำระผ่านบัตรเครดิต หรือบัญชีธนาคาร)\nผ่านทางแอปพลิเคชั่น Link\n- สำนักงานบริการลูกค้า CAT ทุกสาขา";
         $arrayPostData['messages'][2]['type'] = "text";
