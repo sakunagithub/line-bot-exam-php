@@ -14,7 +14,8 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลือกดังนี้...\n\nServic :: ข้อมูลบริการ CAT Voice\nWeb :: ข้อมูล Support อื่นๆ\nCall :: เรียกดูเบอร์ Support\nATA :: ดาวน์โหลดคู่มือการตั้งค่า ATA\nIP :: ดาวน์โหลดคู่มือการตั้งค่า IP Phone";        replyMsg($arrayHeader,$arrayPostData);    }
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลือกดังนี้...\n\n1. Servic\n2. Web\n3. Contact\n4. ATA\n5. IP Phone";        
+        replyMsg($arrayHeader,$arrayPostData);    }
 
     #ลิงค์เว็บ
     else if($message == "เว็บ" || $message == "Web" || $message == "web"){
