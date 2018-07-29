@@ -90,7 +90,8 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #บริการ CAT2call plus
-    else if($message == "S5" || $message == "s5" ||$message == "เติมเงิน" || $message == "รายเดือน" || $message == "postpaid" || $message == "prepaid" ){
+    else if($message == "S5" || $message == "s5" ||$message == "เติมเงิน" || $message == "รายเดือน" || $message == "postpaid" || $message == "prepaid"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "CAT2call plus postpaid (แบบรายเดือน)\n\nสมัครใช้บริการได้ที่\nสำนักงานบริการลูกค้า CAT ทั่วประเทศ";
         $arrayPostData['messages'][1]['type'] = "text";
