@@ -89,18 +89,8 @@
         $arrayPostData['messages'][3]['text'] = "อัตราค่าใช้บริการ\n\n- เริ่มต้นขั้นต่ำที่ 2 ช่องสัญญาณ/เลขหมาย\n- ค่าเช่ารายเดือน 200 บาท/เดือน/2 ช่องสัญญาณ/เลขหมาย\n- เพิ่มช่องสัญญาณ คิดค่าใช้บริการเพิ่ม 100 บาท/เดือน/ช่องสัญญาณ/เลขหมาย\n- ไม่มีค่าใช้บริการในส่วนการรับ Fax เข้า\n-การส่ง Fax ออกจะคิดค่าใช้บริการ ดังนี้\n  หมายเลขภายในจังหวัดเดียวกัน 3 บาท/ครั้ง\n  หมายเลขต่างจังหวัด 1 บาท/นาที";
         replyMsg($arrayHeader,$arrayPostData);
     } 
-    #บริการ CAT2call plus (Link)
-    else if($message == "S5" || $message == "s5" || $message == "link" || $message == "Link" || $message == "เติมเงิน" || $message == "รายเดือน" || $message == "postpaid" || $message == "prepaid" ){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "CAT2call plus (Link)";
-        $arrayPostData['messages'][1]['type'] = "text";
-        $arrayPostData['messages'][1]['text'] = "เป็นบริการโทรศัพท์ผ่านโครงข่ายอินเทอร์เน็ต VoIP แบบมีเลขหมาย สามารถใช้งานผ่านอินเตอร์เน็ตจากผู้ให้บริการรายใดก็ได้ ทำให้สามารถใช้งานได้ทุกที่ที่สามารถเข้าถึงอินเตอร์เน็ตได้ เหมาะสำหรับผู้เดินทางไปต่างประเทศบ่อยๆ สามารถใช้เลขหมาย CAT2call plus โทรออกและรับสายเข้าได้ทุกที่เสมือนอยู่ในประเทศ ทำให้ไม่ต้องเสียค่าใช้จ่ายที่ค่อนข้างแพงจากการใช้บริการ International Roaming บนมือถือ ผู้ใช้บริการสามารถใช้งานผ่านอุปกรณ์ปลายทางประเภทต่างๆ เช่น ATA, IP Phone หรือ mobile application ของ CAT ที่ชื่อว่า Link ก็ได้ โดยสามารถเลือกใช้บริการแบบจดทะเบียนรายเดือนหรือแบบเติมเงินตามความเหมาะสมในการใช้งานของผู้ใช้บริการ\nหมายเหตุ : คุณภาพขึ้นอยู่กับความเร็วของอินเทอร์เน็ตต้นทาง";
-        $arrayPostData['messages'][2]['type'] = "text";
-        $arrayPostData['messages'][2]['text'] = "ดูข้อมูลแบบเพิ่มเติมแบบเติมเงิน หรือรายเดือน **พิมพ์ S6";
-        replyMsg($arrayHeader,$arrayPostData);
-    } 
-    else if($message == "S6" || $message == "s6" ||$message == "เติมเงิน" || $message == "รายเดือน" || $message == "postpaid" || $message == "prepaid" ){
+    #บริการ CAT2call plus
+    else if($message == "S5" || $message == "s5" ||$message == "เติมเงิน" || $message == "รายเดือน" || $message == "postpaid" || $message == "prepaid" ){
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "CAT2call plus postpaid (แบบรายเดือน)\n\nสมัครใช้บริการได้ที่\nสำนักงานบริการลูกค้า CAT ทั่วประเทศ";
         $arrayPostData['messages'][1]['type'] = "text";
