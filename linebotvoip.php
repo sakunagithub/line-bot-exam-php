@@ -32,7 +32,7 @@
     else if($message == "เบอร์โทร" || $message == "โทร" || $message == "ติดต่อ" || $message == "Call" || $message == "call"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สอบถามข้อมูลเพิ่มเติม แจ้งปัญหาการใช้งาน\n☎ ติดต่อ :: 021047045 (ตลอด 24 ชม.)";
+        $arrayPostData['messages'][0]['text'] = "Tandem\n\n- กฤษณะ 7070\n0882950916,0867662144\n- จักรพงษ์ โด่ง 7048,0882950920\n- ดำรงกุล 7252,0818997326 ";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
