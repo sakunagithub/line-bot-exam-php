@@ -14,7 +14,7 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลือกดังนี้...\n\n1. Servic\n2. Web\n3. Contact\n4. ATA\n5. IP Phone";        
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขดังนี้...\n\n1.Service: บริการของ CAT\n2.Web: เว็บดูข้อมูลต่างๆ\n3.Contact: หมายเลขภายใน\n4.ATA: ดาวน์โหลดคู่มือ\n5.IP Phone: ดาวน์โหลดคู่มือ";        
         replyMsg($arrayHeader,$arrayPostData);    }
 
     #ลิงค์เว็บ
