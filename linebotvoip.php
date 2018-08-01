@@ -32,7 +32,7 @@
     else if($message == "เบอร์โทร" || $message == "โทร" || $message == "ติดต่อ" || $message == "Call" || $message == "call"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-         $arrayPostData['messages'][0]['text'] = "Tandem\n\n- กฤษณะ 7070, 0882950916\n- จักรพงษ์ 7048, 0882950920\n- ดำรงกุล 7252, 0818997326\n- บรรเจิด 7045, 0882950929\n- บุญมี 7045,0882950918";
+         $arrayPostData['messages'][0]['text'] = "Tandem\n\n- กฤษณะ 7070, 0882950916\n- จักรพงษ์ 7048, 0882950920\n- ดำรงกุล 7252, 0818997326\n- บรรเจิด 7045, 0882950929\n- บุญมี 7045, 0882950918\n- ปฐมพงษ์ 7047, 0816027468\n- พีระฉัตร 7045, 0910680114\n- ไพศาล 7045, 0841499129\n- ภูมิปัญญา 7045, 088-8923487\n;
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
