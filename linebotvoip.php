@@ -21,7 +21,7 @@
     else if($message == "เว็บ" || $message == "Web" || $message == "web"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สามารถดูข้อมูลเกี่ยวกับบริการต่างๆได้ที\n🌏 http://www.cattelecom.com/cat/index.php?lang=th_TH";
+        $arrayPostData['messages'][0]['text'] = "สามารถดูข้อมูลเกี่ยวกับบริการต่างๆได้ที่\n🌏 http://www.cattelecom.com/cat/index.php?lang=th_TH";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่\n🌏 http://www.cat7045.com/";
         
