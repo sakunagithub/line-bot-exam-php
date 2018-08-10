@@ -33,8 +33,8 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "Tandem & VoIP\n\n- กฤษณะ 7070 0882950916\n- จักรพงษ์ 7048 0882950920\n- ดำรงกุล 7252 0818997326\n- บรรเจิด 7045 0882950929\n- บุญมี 7045 0882950918\n- ปฐมพงษ์ 7047 0816027468\n- พีระฉัตร 7045 0910680114\n- ไพศาล 7045 0841499129\n- ภูมิปัญญา 7045 088-8923487\n- วิชัย 7048 0882950928\n- ศุภวัฒน์ 7045 0887283738\n- สงกรานต์ 7045 0882953726\n- สำราญ 7350 0882950914\n- อนันต์ 7044 0882950915\n- อนุกูล 7314 0864455500\n- อารมณ์ 7045 0882950925";
-        #$arrayPostData['messages'][1]['type'] = "text";
-        #$arrayPostData['messages'][1]['type'] = "ตลาด\n\n- ผส.ต้อม 3888\n- พี่ยุ้ย 3691\n- พี่โม 4988\n- พี่เอิร์ธ 3492\n- พี่ปอ 4517";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['type'] = "ตลาด\n\n- ผส.ต้อม 3888\n- พี่ยุ้ย 3691\n- พี่โม 4988\n- พี่เอิร์ธ 3492\n- พี่ปอ 4517";
         #$arrayPostData['messages'][2]['type'] = "text";
         #$arrayPostData['messages'][2]['type'] = "แจ้งเปิดงาน one connect\n\n- 2948, 1100";
         replyMsg($arrayHeader,$arrayPostData);
