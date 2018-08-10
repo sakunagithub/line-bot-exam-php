@@ -226,6 +226,15 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
+    #Application Phone
+    else if($message == "Application Phone" || $message == "App" || $message == "app"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ Application Phone ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nP1 :: Planet ICF-1700\nP2 :: Planeft 245T\nP3 :: Yealink SIP T20";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+
+
     #IP Phone
     else if($message == "IP Phone" || $message == "IP" || $message == "ip" || $message == "phone" || $message == "Phone"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
