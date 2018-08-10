@@ -14,11 +14,11 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\n4. ATA :: ดาวน์โหลดคู่มือ\n5. IP Phone :: ดาวน์โหลดคู่มือ";        
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\n4. ATA :: ดาวน์โหลดคู่มือ\n5. Application Phone\n6. IP Phone :: ดาวน์โหลดคู่มือ";        
         replyMsg($arrayHeader,$arrayPostData);    }
 
     #ลิงค์เว็บ
-    else if($message == "เว็บ" || $message == "Web" || $message == "web"){
+    else if($message == "2" || $message == "2." || $message == "เว็บ" || $message == "Web" || $message == "web"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สามารถดูข้อมูลเกี่ยวกับบริการต่างๆได้ที่\n🌏 http://www.cattelecom.com/cat/index.php?lang=th_TH";
@@ -29,7 +29,7 @@
     }
     
     #เบอร์โทร
-    else if($message == "เบอร์โทร" || $message == "โทร" || $message == "ติดต่อ" || $message == "Call" || $message == "call"){
+    else if($message == "3" || $message == "3." || $message == "เบอร์โทร" || $message == "โทร" || $message == "ติดต่อ" || $message == "Call" || $message == "call" || $message == "Contact" || $message == "contact"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
          $arrayPostData['messages'][0]['text'] = "Tandem & VoIP\n\n- กฤษณะ 7070 0882950916\n- จักรพงษ์ 7048 0882950920\n- ดำรงกุล 7252 0818997326\n- บรรเจิด 7045 0882950929\n- บุญมี 7045 0882950918\n- ปฐมพงษ์ 7047 0816027468\n- พีระฉัตร 7045 0910680114\n- ไพศาล 7045 0841499129\n- ภูมิปัญญา 7045 088-8923487\n- วิชัย 7048 0882950928\n- ศุภวัฒน์ 7045 0887283738\n- สงกรานต์ 7045 0882953726\n- สำราญ 7350 0882950914\n- อนันต์ 7044 0882950915\n- อนุกูล 7314 0864455500\n- อารมณ์ 7045 0882950925";
@@ -37,7 +37,7 @@
     } 
 
     #บริการ CAT Voice
-    else if($message == "Voice" || $message == "voice" || $message == "Service" || $message == "service"){
+    else if($message == "1" || $message == "1." || $message == "Voice" || $message == "voice" || $message == "Service" || $message == "service"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "เลือกข้อมููลบริการที่ต้องการค้นหา\nโดยพิมพ์ตัวเลือกดังนี้...\n\nS1 :: CAT 001,009\nS2 :: One Connect\nS3 :: Hosted PBX\nS4 :: SIP Connect\nS5 :: Fax2Email\nS6 :: CAT2call plus (postpaid, prepaid)";
@@ -113,7 +113,7 @@
     } 
 
     #ATA
-    else if($message == "ATA" || $message == "Ata" || $message == "ata"){
+    else if($message == "4" || $message == "4." || $message == "ATA" || $message == "Ata" || $message == "ata"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ ATA ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nA1 :: Paradox\nA2 :: Cisco SPA8000\nA3 :: Cisco SPA112\nA4 :: Gran gxw400\nA5 :: Grandstream GXW-400x Series\nA6 :: HuaWei\nA7 :: Welltech ATA172\nA8 :: Audio Codes\nA9 :: Dinstar\nA10 :: LinksysPAP2\nA11 :: Fritzbox\nA12 :: Planet VIP-157S\nA13 :: Raisecom MSG1200-GEC\nA14 :: UCM6104\nA15 :: Grandstream HT 702";
@@ -227,16 +227,29 @@
     } 
 
     #Application Phone
-    else if($message == "Application Phone" || $message == "App" || $message == "app"){
+    else if($message == "5" || $message == "5." || $message == "Application Phone" || $message == "App" || $message == "app"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ Application Phone ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nP1 :: Planet ICF-1700\nP2 :: Planeft 245T\nP3 :: Yealink SIP T20";
+        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ Application Phone ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nApp1 :: TOLD SAPP\nApp2 :: ZOIPER\nApplication อื่น ๆ ไม่สามารถดาวน์โหลดได้เนื่องจากเป็นไฟล์ .rar ค่ะ";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    #App1-TOLD SAPP
+    else if($message == "App1"  || $message == "app1"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "TOLD SAPP\n🌏 http://122.155.128.138/cat7045/manual/App.%20Toldsaap/App.%20Toldsaap.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    #App2-ZOIPER
+    else if($message == "App2"  || $message == "app2"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ZOIPER for IOS\n🌏 http://122.155.128.138/cat7045/manual/zoiper/zoiper%20for%20i-Phone.pdf\nZOIPER for Android\n🌏 http://http://122.155.128.138/cat7045/manual/zoiper/Zoiper%20for%20android.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
-
     #IP Phone
-    else if($message == "IP Phone" || $message == "IP" || $message == "ip" || $message == "phone" || $message == "Phone"){
+    else if($message == "6" || $message == "6." || $message == "IP Phone" || $message == "IP" || $message == "ip" || $message == "phone" || $message == "Phone"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ IP Phone ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nP1 :: Planet ICF-1700\nP2 :: Planeft 245T\nP3 :: Yealink SIP T20";
