@@ -48,7 +48,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     #001,009
-    else if($message == "S1" || $message == "s1" || $message == "001" || $message == "009"){
+    else if($message == "S1" || $message == "s1"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "CAT 001\n\nเป็นบริการโทรศัพท์ระหว่างประเทศระบบเรียกตรงอัตโนมัติ หรือ IDD (International Direct Dialing) ด้วยรหัส 001  โทรติดง่าย คุณภาพเสียงคมชัด ไม่มีเสียงรบกวน สัญญานเสียง ไม่ดีเลย์ แสดงเลขหมายต้นทาง (โชว์ CLI) และใช้ส่งแฟกซ์ได้อย่างมีประสิทธิภาพ สามารถเรียกใช้บริการได้จากโทรศัพท์พื้นฐานและโทรศัพท์มือถือทุกเครือข่าย บริการครอบคลุม 233 ปลายทางทั่วโลก";
@@ -234,7 +234,7 @@
     else if($message == "5" || $message == "5." || $message == "Application Phone" || $message == "App" || $message == "app"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ Application Phone ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nApp1 :: TOLD SAPP\nApp2 :: ZOIPER\nApplication อื่น ๆ ไม่สามารถดาวน์โหลดได้เนื่องจากเป็นไฟล์ .rar ค่ะ";
+        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ Application Phone ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\n\nApp1 :: TOLD SAPP\nApp2 :: ZOIPER\nApplication อื่น ๆ ไม่สามารถดาวน์โหลดได้เนื่องจากเป็นไฟล์ .rar ค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #App1-TOLD SAPP
@@ -285,7 +285,7 @@
     else if($message == "7" || $message == "7." || $message == "IP Phone" || $message == "Voice Gateway " || $message == "voice" || $message == "Voice Gateway" || $message == "Gateway" || $message == "gateway"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ Voice Gateway ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nV1 :: LINKSYS SPA8000\nV2 :: GRANDSTREAM GWX-400\nV3 :: PARADOXES SAG1000-8S";
+        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ Voice Gateway ที่ต้องการดาวน์โหลด โดยพิมพ์ตัวเลือกดังนี้...\n\nV1 :: LINKSYS SPA8000\nV2 :: GRANDSTREAM GWX-400\nV3 :: PARADOXES SAG1000-8S";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #V1-LINKSYS SPA8000
