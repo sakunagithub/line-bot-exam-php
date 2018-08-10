@@ -14,7 +14,7 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\n4. ATA :: ดาวน์โหลดคู่มือ\n5. App :: คู่มือ Application Phone\n6. IP Phone :: ดาวน์โหลดคู่มือ\n7. Voice Gateway :: :: ดาวน์โหลดคู่มือ";        
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\n4. ATA :: ดาวน์โหลดคู่มือ\n5. App :: คู่มือ Application Phone\n6. IP Phone :: ดาวน์โหลดคู่มือ\n7. Voice Gateway :: ดาวน์โหลดคู่มือ\n8. ONU HUAWEI :: ดาวน์โหลดคู่มือ\n8. ONU ZyXEL :: ดาวน์โหลดคู่มือ"";        
         replyMsg($arrayHeader,$arrayPostData);    }
 
     #ลิงค์เว็บ
@@ -305,6 +305,23 @@
         $arrayPostData['messages'][0]['text'] = "PARADOXES SAG1000-8S\n🌏 http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
+
+    #ONU HUAWEI 
+    else if($message == "8" || $message == "8." || $message == "ONU HUAWEI" || $message == "onu huawei" || $message == "Onu Huawei"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ONU HUAWEI\n🌏 http://122.155.128.138/cat7045/manual/HuaWei/HuaWei.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+
+    #ONU ZyXEL 
+    else if($message == "8" || $message == "8." || $message == "ONU ZyXEL" || $message == "onu zyxel" || $message == "Onu Zyxel"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ONU ZyXEL\n🌏 http://122.155.128.138/cat7045/manual/zyxel/Zyxel_P-2612HNU-F1F_1.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    
 
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
