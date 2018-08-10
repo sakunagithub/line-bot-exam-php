@@ -281,14 +281,28 @@
     else if($message == "7" || $message == "7." || $message == "IP Phone" || $message == "Voice Gateway " || $message == "voice" || $message == "Voice Gateway" || $message == "Gateway" || $message == "gateway"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ Voice Gateway ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nV1 :: LINKSYS SPA8000";
+        $arrayPostData['messages'][0]['text'] = "เลือกคู่มือ Voice Gateway ที่ต้องการดาวน์โหลด\nโดยพิมพ์ตัวเลือกดังนี้...\n\nV1 :: LINKSYS SPA8000\nV2 :: GRANDSTREAM GWX-400\nV3 :: PARADOXES SAG1000-8S";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #V1-LINKSYS SPA8000
     else if($message == "V1"  || $message == "v1" || $message == "SPA8000" || $message == "spa8000"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "LINKSYS SPA8000\n🌏 http://http://122.155.128.138/cat7045/manual/Cisco%20SPA8000/spa8000.pdf";
+        $arrayPostData['messages'][0]['text'] = "LINKSYS SPA8000\n🌏 http://122.155.128.138/cat7045/manual/Cisco%20SPA8000/spa8000.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    #V2-GRANDSTREAM GWX-400
+    else if($message == "V2"  || $message == "v2"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "GRANDSTREAM GWX-400\n🌏 http://122.155.128.138/cat7045/manual/Gran%20gxw400/Grandsteam%20GWX.pdf";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+    #V3-PARADOXES SAG1000-8S
+    else if($message == "V3"  || $message == "v3"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "PARADOXES SAG1000-8S\n🌏 http://122.155.128.138/cat7045/manual/Paradox/Paradoxes%20SAG1000-8s.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
