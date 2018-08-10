@@ -24,7 +24,6 @@
         $arrayPostData['messages'][0]['text'] = "สามารถดูข้อมูลเกี่ยวกับบริการต่างๆได้ที่\n🌏 http://www.cattelecom.com/cat/index.php?lang=th_TH";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "สามารถดาวน์โหลดคู่มือการติดตั้งอุปกรณ์ได้ที่\n🌏 http://www.cat7045.com/";
-        
         replyMsg($arrayHeader,$arrayPostData);
     }
     
@@ -318,7 +317,7 @@
     else if($message == "8" || $message == "8." || $message == "ONU ZyXEL" || $message == "onu zyxel" || $message == "Onu Zyxel"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ONU ZyXEL\n🌏 http://122.155.128.138/cat7045/manual/zyxel/Zyxel_P-2612HNU-F1F_1.pdf";
+        $arrayPostData['messages'][0]['text'] = "ONU ZyXEL P-2612HNU-F1F\n🌏 http://122.155.128.138/cat7045/manual/zyxel/Zyxel_P-2612HNU-F1F_1.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
