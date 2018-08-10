@@ -36,7 +36,7 @@
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['type'] = "ตลาด\n\n- ผส.ต้อม 3888\n- พี่ยุ้ย 3691\n- พี่โม 4988\n- พี่เอิร์ธ 3492\n- พี่ปอ 4517";
         $arrayPostData['messages'][2]['type'] = "text";
-        $arrayPostData['messages'][2]['type'] = "แจ้งเปิดงาน one connect\n\n- 2948\n- 1100";
+        $arrayPostData['messages'][2]['type'] = "แจ้งเปิดงาน one connect\n\n- 2948, 1100";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
