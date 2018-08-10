@@ -14,8 +14,9 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\n4. ATA :: ดาวน์โหลดคู่มือ\n5. App :: คู่มือ Application Phone\n6. IP Phone :: ดาวน์โหลดคู่มือ\n7. Voice Gateway :: ดาวน์โหลดคู่มือ\n8. ONU HUAWEI :: ดาวน์โหลดคู่มือ\n8. ONU ZyXEL :: ดาวน์โหลดคู่มือ"";        
-        replyMsg($arrayHeader,$arrayPostData);    }
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\n4. ATA :: ดาวน์โหลดคู่มือ\n5. App :: คู่มือ Application Phone\n6. IP Phone :: ดาวน์โหลดคู่มือ\n7. Voice Gateway :: ดาวน์โหลดคู่มือ\n8. ONU HUAWEI :: ดาวน์โหลดคู่มือ\n8. ONU ZyXEL :: ดาวน์โหลดคู่มือ";        
+        replyMsg($arrayHeader,$arrayPostData);    
+    }
 
     #ลิงค์เว็บ
     else if($message == "2" || $message == "2." || $message == "เว็บ" || $message == "Web" || $message == "web"){
