@@ -330,19 +330,15 @@
     else if($message == "9" || $message == "9."){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "CAT2Call, one-connect, Link, Hosted PBX\n\nAccess: access01\nIP: 202.129.61.102\nPort: 5060,80\ncon-current: 2";
+        $arrayPostData['messages'][0]['text'] = "CAT2Call, one-connect, Link, Hosted PBX\nAccess: access01\nIP: 202.129.61.102\nPort: 5060,80\ncon-current: 2";
         $arrayPostData['messages'][1]['type'] = "text";
-        $arrayPostData['messages'][1]['text'] = "CAT2Call, one-connect, Hosted PBX\n\nAccess: access02_2\nIP: 202.129.61.118\nPort: 5164\ncon-current: 2";
+        $arrayPostData['messages'][1]['text'] = "CAT2Call, one-connect, Hosted PBX\nAccess: access02_2\nIP: 202.129.61.118\nPort: 5164\ncon-current: 2";
         $arrayPostData['messages'][2]['type'] = "text";
-        $arrayPostData['messages'][2]['text'] = "one-connect\n\nAccess: access_onu\nIP: 172.27.99.99\nPort: 5060\ncon-current: 2";
+        $arrayPostData['messages'][2]['text'] = "one-connect\nAccess: access_onu\nIP: 172.27.99.99\nPort: 5060\ncon-current: 2\n\nsip-connect, Hosted PBX\nAccess: access02\nIP: 202.129.61.118\nPort: 5060\ncon-current: 30";
         $arrayPostData['messages'][3]['type'] = "text";
-        $arrayPostData['messages'][3]['text'] = "sip-connect, Hosted PBX\n\nAccess: access02\nIP: 202.129.61.118\nPort: 5060\ncon-current: 30";
+        $arrayPostData['messages'][3]['text'] = "sip-connect\nAccess: access02_5\nIP: 202.129.61.118\nPort: 5165\ncon-current: 5\n\nAccess: access02_10\nIP: 202.129.61.118\nPort: 5166\ncon-current: 10\n\nAccess: access02_30\nIP: 202.129.61.118\nPort: 5167\ncon-current: 30\n\nAccess: access02_60\nIP: 202.129.61.118\nPort: 5168\ncon-current: 60\n\nAccess: access04\nIP: 202.129.61.196\nPort: 5060\ncon-current: 60\n\nAccess: access05\nIP: 202.129.61.197\nPort: 5060\ncon-current: 120";
         $arrayPostData['messages'][4]['type'] = "text";
-        $arrayPostData['messages'][4]['text'] = "sip-connect\n\nAccess: access02_5\nIP: 202.129.61.118\nPort: 5165\ncon-current: 5\n\nAccess: access02_10\nIP: 202.129.61.118\nPort: 5166\ncon-current: 10\n\nAccess: access02_30\nIP: 202.129.61.118\nPort: 5167\ncon-current: 30\n\nAccess: access02_60\nIP: 202.129.61.118\nPort: 5168\ncon-current: 60\n\nAccess: access04\nIP: 202.129.61.196\nPort: 5060\ncon-current: 60\n\nAccess: access05\nIP: 202.129.61.197\nPort: 5060\ncon-current: 120";
-        $arrayPostData['messages'][5]['type'] = "text";
-        $arrayPostData['messages'][5]['text'] = "Wholesale prepaid\n\nAccess: access-txrx\nIP: 202.129.61.102\nPort: 5261\ncon-current: xx";
-        #$arrayPostData['messages'][6]['type'] = "text";
-        #$arrayPostData['messages'][6]['text'] = "CAT's partner\n\nAccess: access_partner\nIP: 172.27.99.1\nPort: 5060\ncon-current: 2";
+        $arrayPostData['messages'][4]['text'] = "Hosted PBX\nAccess: access01p5063\nIP: 202.129.61.102\nPort: 5063\ncon-current: 10\n\nAccess: access02p5160\nIP: 202.129.61.118\nPort: 5160\ncon-current: 10";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
