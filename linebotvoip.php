@@ -338,7 +338,7 @@
         $arrayPostData['messages'][3]['type'] = "text";
         $arrayPostData['messages'][3]['text'] = "sip-connect, Hosted PBX\nAccess: access02\nIP: 202.129.61.118\nPort: 5060\ncon-current: 30";
         $arrayPostData['messages'][4]['type'] = "text";
-        $arrayPostData['messages'][4]['text'] = "sip-connect\nAccess: access02_5\nIP: 202.129.61.118\nPort: 5165\ncon-current: 5";
+        $arrayPostData['messages'][4]['text'] = "sip-connect\nAccess: access02_5\nIP: 202.129.61.118\nPort: 5165\ncon-current: 5\n\nAccess: access02_10\nIP: 202.129.61.118\nPort: 5166\ncon-current: 10\n\nAccess: access02_30\nIP: 202.129.61.118\nPort: 5167\ncon-current: 30\n\nAccess: access02_60\nIP: 202.129.61.118\nPort: 5168\ncon-current: 60\n\nAccess: access04\nIP: 202.129.61.196\nPort: 5060\ncon-current: 60\n\nAccess: access05\nIP: 202.129.61.197\nPort: 5060\ncon-current: 120";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
