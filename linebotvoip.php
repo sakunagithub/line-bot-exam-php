@@ -342,7 +342,7 @@
         $arrayPostData['messages'][5]['type'] = "text";
         $arrayPostData['messages'][5]['text'] = "Wholesale prepaid\n\nAccess: access-txrx\nIP: 202.129.61.102\nPort: 5261\ncon-current: xx";
         $arrayPostData['messages'][6]['type'] = "text";
-        $arrayPostData['messages'][6]['text'] = "CAT's partner\n\nAccess: access_partner\nIP: 172.27.99.1\nPort: 5060\ncon-current: 2";";
+        $arrayPostData['messages'][6]['text'] = "CAT's partner\n\nAccess: access_partner\nIP: 172.27.99.1\nPort: 5060\ncon-current: 2";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
