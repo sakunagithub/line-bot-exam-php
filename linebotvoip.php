@@ -326,6 +326,13 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
+    #ONU ZyXEL 
+    else if($message == "8" || $message == "8." || $message == "ONU ZyXEL" || $message == "onu zyxel" || $message == "Onu Zyxel"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "Services: CAT2Call, one-connect, Link, Hosted PBX\nIP: 202.129.61.102\nPort: 5060,80:Access: access01\nCon-Current: 2";
+    } 
+    
 
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
