@@ -341,8 +341,8 @@
         $arrayPostData['messages'][4]['text'] = "sip-connect\n\nAccess: access02_5\nIP: 202.129.61.118\nPort: 5165\ncon-current: 5\n\nAccess: access02_10\nIP: 202.129.61.118\nPort: 5166\ncon-current: 10\n\nAccess: access02_30\nIP: 202.129.61.118\nPort: 5167\ncon-current: 30\n\nAccess: access02_60\nIP: 202.129.61.118\nPort: 5168\ncon-current: 60\n\nAccess: access04\nIP: 202.129.61.196\nPort: 5060\ncon-current: 60\n\nAccess: access05\nIP: 202.129.61.197\nPort: 5060\ncon-current: 120";
         $arrayPostData['messages'][5]['type'] = "text";
         $arrayPostData['messages'][5]['text'] = "Wholesale prepaid\n\nAccess: access-txrx\nIP: 202.129.61.102\nPort: 5261\ncon-current: xx";
-        $arrayPostData['messages'][2]['type'] = "text";
-        $arrayPostData['messages'][2]['text'] = "CAT's partner\n\nAccess: access_partner\nIP: 172.27.99.1\nPort: 5060\ncon-current: 2";";
+        $arrayPostData['messages'][6]['type'] = "text";
+        $arrayPostData['messages'][6]['text'] = "CAT's partner\n\nAccess: access_partner\nIP: 172.27.99.1\nPort: 5060\ncon-current: 2";";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
