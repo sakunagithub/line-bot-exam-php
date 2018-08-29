@@ -326,8 +326,8 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
-    #ONU ZyXEL 
-    else if($message == "9" || $message == "9."){
+    #Access
+    else if($message == "9" || $message == "9." || $message == "Access" || $message == "access"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "CAT2Call, one-connect, Link, Hosted PBX\naccess01\n202.129.61.102 : 5060, 80 (2 con)";
@@ -339,6 +339,14 @@
         $arrayPostData['messages'][3]['text'] = "sip-connect, Hosted PBX\naccess02\n202.129.61.118 : 5060 (30 con)\n\nsip-connect\naccess02_5\n202.129.61.118 : 5165 (5 con)\n\naccess02_10\n202.129.61.118 : 5166 (10 con)\n\naccess02_30\n202.129.61.118 : 5167 (30 con)\n\naccess02_60\n202.129.61.118 : 5168 (60 con)\n\naccess04\n202.129.61.196 : 5060 (60 con)\n\naccess05\n202.129.61.197 : 5060 (120 con)";
         $arrayPostData['messages'][4]['type'] = "text";
         $arrayPostData['messages'][4]['text'] = "Hosted PBX\naccess01p5063\n202.129.61.102 : 5063 (10 con)\n\naccess02p5160\n202.129.61.118 : 5160 (10 con)";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
+
+    #Add Access
+    else if($message == "10" || $message == "10." || $message == "add access"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "en\nใส่ password\nconfigure terminal\nsession-router\nlocal-policy\nselect\nกด Enter\nเลือกแถวว่างเช่น 180\nพิมพ์ 180 กด Enter\nshow\ndone\nex\nex\nex\nverify-config\nsave-config\nactivate-config\nex";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
