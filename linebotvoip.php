@@ -330,7 +330,7 @@
     else if($message == "9" || $message == "9."){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "CAT2Call, one-connect, Link, Hosted PBX\nAccess :: access01\nIP :: 202.129.61.102\nProt :: 5060, 80\ncon-current: 2";
+        $arrayPostData['messages'][0]['text'] = "CAT2Call, one-connect, Link, Hosted PBX\nAccess01\n202.129.61.102 : 5060, 80 (2 con)";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "CAT2Call, one-connect, Hosted PBX\nAccess: access02_2\nIP: 202.129.61.118\nPort: 5164\ncon-current: 2";
         $arrayPostData['messages'][2]['type'] = "text";
