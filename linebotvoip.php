@@ -336,7 +336,7 @@
         $arrayPostData['messages'][2]['type'] = "text";
         $arrayPostData['messages'][2]['text'] = "one-connect\naccess_onu\n172.27.99.99 : 5060  (2 con)";
         $arrayPostData['messages'][3]['type'] = "text";
-        $arrayPostData['messages'][3]['text'] = "sip-connect, Hosted PBX\naccess02\n202.129.61.118 : 5060 (30 con)\nsip-connect\nAccess: access02_5\nIP: 202.129.61.118\nPort: 5165\ncon-current: 5\n\nAccess: access02_10\nIP: 202.129.61.118\nPort: 5166\ncon-current: 10\n\nAccess: access02_30\nIP: 202.129.61.118\nPort: 5167\ncon-current: 30\n\nAccess: access02_60\nIP: 202.129.61.118\nPort: 5168\ncon-current: 60\n\nAccess: access04\nIP: 202.129.61.196\nPort: 5060\ncon-current: 60\n\nAccess: access05\nIP: 202.129.61.197\nPort: 5060\ncon-current: 120";
+        $arrayPostData['messages'][3]['text'] = "sip-connect, Hosted PBX\naccess02\n202.129.61.118 : 5060 (30 con)\nsip-connect\naccess02_5\n202.129.61.118 : 5165 (5 con)\n\nAccess: access02_10\nIP: 202.129.61.118\nPort: 5166\ncon-current: 10\n\nAccess: access02_30\nIP: 202.129.61.118\nPort: 5167\ncon-current: 30\n\nAccess: access02_60\nIP: 202.129.61.118\nPort: 5168\ncon-current: 60\n\nAccess: access04\nIP: 202.129.61.196\nPort: 5060\ncon-current: 60\n\nAccess: access05\nIP: 202.129.61.197\nPort: 5060\ncon-current: 120";
         $arrayPostData['messages'][4]['type'] = "text";
         $arrayPostData['messages'][4]['text'] = "Hosted PBX\naccess01p5063\n202.129.61.102 : 5063 (10 con)\n\nAccess: access02p5160\nIP: 202.129.61.118\nPort: 5160\ncon-current: 10";
         replyMsg($arrayHeader,$arrayPostData);
