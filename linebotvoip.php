@@ -346,7 +346,7 @@
     else if($message == "10" || $message == "10." || $message == "add access"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "en\nใส่ password\nconfigure terminal\nsession-router\nlocal-policy\nselect\nกด Enter\nเลือกแถวว่างเช่น 180\nพิมพ์ 180 กด Enter\nshow\ndone\nex\nex\nex\nverify-config\nsave-config\nactivate-config\nex";
+        $arrayPostData['messages'][0]['text'] = "> en\n> ใส่ password\nc> onfigure terminal\n> session-router\n> local-policy\n> select\n> กด Enter\n> เลือกแถวว่างเช่น 180\n> พิมพ์ 180 กด Enter\n> show\n> done\n> ex\n> ex\n> ex\n> verify-config\n> save-config\n> activate-config\n> ex";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
