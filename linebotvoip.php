@@ -354,7 +354,11 @@
     else if($message == "11" || $message == "11." || $message == "IMS" || $message == "error ims"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "403\nAuthentication Failed: Password ผิด\nAuthentication Reject: HSS บล็อก\nUser Kn";
+        $arrayPostData['messages'][0]['text'] = "403 Forbidden\nAuthentication Failed: Password ผิด\nAuthentication Reject: HSS บล็อก\nUser Unknown: ไม่มีเบอร์ใน HSS\nPrivate and Public: ตรวจสอบค่า config ที่ Domain กับ authentication id catnextgen.com";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "482 Loop Deteced: ใส่ข้อมูลไม่ครบ หรือให้สังเกตที่ port catnextgen.com สถานะต้องเป็น Register Sip: catnextgen.com";
+        $arrayPostData['messages'][2]['type'] = "text";
+        $arrayPostData['messages'][2]['text'] = "500 Internal Server Error: ติดที่ฝั่งของลูกค้า";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
