@@ -14,7 +14,7 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\n4. ATA :: ดาวน์โหลดคู่มือ\n5. App :: คู่มือ Application Phone\n6. IP Phone :: ดาวน์โหลดคู่มือ\n7. Voice Gateway :: ดาวน์โหลดคู่มือ\n8. ONU HUAWEI :: ดาวน์โหลดคู่มือ\n9. ONU ZyXEL :: ดาวน์โหลดคู่มือ";        
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\nดาวน์โหลดคู่มือ\n4. ATA\n5. Application Phone\n6. IP Phone\n7. Voice Gateway\n8. ONU HUAWEI\n9. ONU ZyXEL\n10. Add Access\n11. Error IMS";        
         replyMsg($arrayHeader,$arrayPostData);    
     }
 
@@ -325,6 +325,14 @@
         $arrayPostData['messages'][0]['text'] = "ONU ZyXEL P-2612HNU-F1F\n🌏 http://122.155.128.138/cat7045/manual/zyxel/Zyxel_P-2612HNU-F1F_1.pdf";
         replyMsg($arrayHeader,$arrayPostData);
     } 
+
+    #สรุปค่า config
+    else if($message == "9" || $message == "9." || $message == "config" || $message == "Config"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "Displayed Name: ใส่ค่าอะไรก็ไ";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
     
     #Access
     else if($message == "9" || $message == "9." || $message == "Access" || $message == "access"){
@@ -350,15 +358,15 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
-    #Add Access
-    else if($message == "11" || $message == "11." || $message == "IMS" || $message == "error ims"){
+    #error ims
+    else if($message == "11" || $message == "11." || $message == "IMS" || $message == "error ims" || $message == "ERROR IMS"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "403 Forbidden\nAuthentication Failed: Password ผิด\nAuthentication Reject: HSS บล็อก\nUser Unknown: ไม่มีเบอร์ใน HSS\nPrivate and Public: ตรวจสอบค่า config ที่ Domain กับ authentication id catnextgen.com";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "482 Loop Deteced: ใส่ข้อมูลไม่ครบ หรือให้สังเกตที่ port catnextgen.com สถานะต้องเป็น Register Sip: catnextgen.com";
         $arrayPostData['messages'][2]['type'] = "text";
-        $arrayPostData['messages'][2]['text'] = "500 Internal Server Error: ติดที่ฝั่งของลูกค้า";
+        $arrayPostData['messages'][2]['text'] = "500 Internal Server Error: ติดที่ฝั่งของลูกค้า ถ้าติด IVR หรือโทรติด ต้องขึ้นสถานะ 200 ok";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
