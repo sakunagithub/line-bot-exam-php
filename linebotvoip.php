@@ -14,7 +14,7 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\nดาวน์โหลดคู่มือ\n4. ATA\n5. Application Phone\n6. IP Phone\n7. Voice Gateway\n8. ONU HUAWEI\n9. ONU ZyXEL\n10. Add Access\n11. Error IMS";        
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\nดาวน์โหลดคู่มือ\n4. ATA\n5. Application Phone\n6. IP Phone\n7. Voice Gateway\n8. ONU HUAWEI\n9. ONU ZyXEL\n10. สรุปค่า Config\n11. Access\n12. Add Access\n13. Error IMS";        
         replyMsg($arrayHeader,$arrayPostData);    
     }
 
@@ -319,7 +319,7 @@
     } 
 
     #ONU ZyXEL 
-    else if($message == "8" || $message == "8." || $message == "ONU ZyXEL" || $message == "onu zyxel" || $message == "Onu Zyxel"){
+    else if($message == "9" || $message == "9." || $message == "ONU ZyXEL" || $message == "onu zyxel" || $message == "Onu Zyxel"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ONU ZyXEL P-2612HNU-F1F\n🌏 http://122.155.128.138/cat7045/manual/zyxel/Zyxel_P-2612HNU-F1F_1.pdf";
@@ -327,15 +327,17 @@
     } 
 
     #สรุปค่า config
-    else if($message == "9" || $message == "9." || $message == "config" || $message == "Config"){
+    else if($message == "10" || $message == "10." || $message == "config" || $message == "Config"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "Displayed Name: ใส่ค่าอะไรก็ไ";
+        $arrayPostData['messages'][0]['text'] = "Displayed Name: ใส่ค่าอะไรก็ได้\nUsername: +66XXXXXXXX\nPassword: ใส่ pass ที่ได้ในระบบ\nAuthorization Name: +66XXXXXXXX@catnextgen.com\nDomain: catnextgen.com\nProxy Address: ใส่ IP Access:Port";
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "Codec: G729,G711A";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
     #Access
-    else if($message == "9" || $message == "9." || $message == "Access" || $message == "access"){
+    else if($message == "11" || $message == "11." || $message == "Access" || $message == "access"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "CAT2Call, one-connect, Link, Hosted PBX\naccess01\n202.129.61.102 : 5060, 80 (2 con)";
@@ -351,7 +353,7 @@
     } 
 
     #Add Access
-    else if($message == "10" || $message == "10." || $message == "add access"){
+    else if($message == "12" || $message == "12." || $message == "add access"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "Add Access\n> en\n> ใส่ password\n> configure terminal\n> session-router\n> local-policy\n> select\n> กด Enter\n> เลือกแถวว่างเช่น 180\n> พิมพ์ 180 กด Enter\n> show\n> from-address (+66xxxxxxxx +66...)\n> done\n> ex\n> ex\n> ex\n> verify-config\n> save-config\n> activate-config\n> ex";
@@ -359,7 +361,7 @@
     } 
 
     #error ims
-    else if($message == "11" || $message == "11." || $message == "IMS" || $message == "error ims" || $message == "ERROR IMS"){
+    else if($message == "13" || $message == "13." || $message == "IMS" || $message == "error ims" || $message == "ERROR IMS"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "403 Forbidden\nAuthentication Failed: Password ผิด\nAuthentication Reject: HSS บล็อก\nUser Unknown: ไม่มีเบอร์ใน HSS\nPrivate and Public: ตรวจสอบค่า config ที่ Domain กับ authentication id catnextgen.com";
