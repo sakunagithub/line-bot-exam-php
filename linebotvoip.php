@@ -376,7 +376,7 @@
     else if($message == "14" || $message == "14." || $message == "เปิดโทรต่างประเทศ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ลูกค้าต้องการเปิดโทรต่างประเทศ\nCAT2Call Plus prepaid (เติมเงิน)\nสามารถเปิดโทร ตปท. ได้เลย";
+        $arrayPostData['messages'][0]['text'] = "ลูกค้าต้องการเปิดโทรต่างประเทศ\n\nCAT2Call Plus prepaid (เติมเงิน)\nสามารถเปิดโทร ตปท. ได้เลย";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "CAT2Call Plus postpaid (รายเดือน), SIP\nส่งเมลมาที่ catvoip@cattelecom.com เอกสารแนบเพิ่มเติม\n- รายละเอียดลูกค้า เช่น จดทะเบียนในนาม ชื่อ บริษัท จะพิมพ์หรือส่งไฟล์มาก็ได้\n- บิลงวดสุดท้าย (ถ้ามี)";
         $arrayPostData['messages'][2]['type'] = "text";
