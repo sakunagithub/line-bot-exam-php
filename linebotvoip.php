@@ -349,6 +349,14 @@
         $arrayPostData['messages'][0]['text'] = "Add Access\n> en\n> ใส่ password\n> configure terminal\n> session-router\n> local-policy\n> select\n> กด Enter\n> เลือกแถวว่างเช่น 180\n> พิมพ์ 180 กด Enter\n> show\n> from-address (+66xxxxxxxx +66...)\n> done\n> ex\n> ex\n> ex\n> verify-config\n> save-config\n> activate-config\n> ex";
         replyMsg($arrayHeader,$arrayPostData);
     } 
+
+    #Add Access
+    else if($message == "11" || $message == "11." || $message == "IMS" || $message == "error ims"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "403\nAuthentication Failed: Password ผิด\nAuthentication Reject: HSS บล็อก\nUser Kn";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
     
 
 function replyMsg($arrayHeader,$arrayPostData){
