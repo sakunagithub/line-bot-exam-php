@@ -371,6 +371,14 @@
         $arrayPostData['messages'][2]['text'] = "500 Internal Server Error: ติดที่ฝั่งของลูกค้า ถ้าติด IVR หรือโทรติด ต้องขึ้นสถานะ 200 ok";
         replyMsg($arrayHeader,$arrayPostData);
     } 
+
+    #เปิดโทรต่างประเทศ
+    else if($message == "13" || $message == "13." || $message == "โทรต่างประเทศ"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "Add Access\n> en\n> ใส่ password\n> configure terminal\n> session-router\n> local-policy\n> select\n> กด Enter\n> เลือกแถวว่างเช่น 180\n> พิมพ์ 180 กด Enter\n> show\n> from-address (+66xxxxxxxx +66...)\n> done\n> ex\n> ex\n> ex\n> verify-config\n> save-config\n> activate-config\n> ex";
+        replyMsg($arrayHeader,$arrayPostData);
+    } 
     
 
 function replyMsg($arrayHeader,$arrayPostData){
