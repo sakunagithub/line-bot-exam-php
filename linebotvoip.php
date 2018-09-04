@@ -14,7 +14,7 @@
     if($message == "Keyword" || $message == "keyword" || $message == "Help" || $message == "help" || $message == "bot" || $message == "บอท"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\nดาวน์โหลดคู่มือ\n4. ATA\n5. Application Phone\n6. IP Phone\n7. Voice Gateway\n8. ONU HUAWEI\n9. ONU ZyXEL\n10. สรุปค่า Config\n11. Access\n12. Add Access\n13. Error IMS";        
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมูลที่ต้องการค้นหา\nโดยพิมพ์ตัวเลขหรือหัวข้อดังนี้...\n\n1. Service :: บริการของ CAT\n2. Web :: เว็บดูข้อมูลต่างๆ\n3. Contact :: หมายเลขภายใน\nดาวน์โหลดคู่มือ\n4. ATA\n5. Application Phone\n6. IP Phone\n7. Voice Gateway\n8. ONU HUAWEI\n9. ONU ZyXEL\n10. สรุปค่า Config\n11. Access\n12. Add Access\n13. Error IMS\n14. เปิดโทรต่างประเทศ";        
         replyMsg($arrayHeader,$arrayPostData);    
     }
 
@@ -373,7 +373,7 @@
     } 
 
     #เปิดโทรต่างประเทศ
-    else if($message == "13" || $message == "13." || $message == "โทรต่างประเทศ"){
+    else if($message == "14" || $message == "14." || $message == "เปิดโทรต่างประเทศ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ลูกค้าต้องการเปิดโทรต่างประเทศ\nCAT2Call Plus prepaid (เติมเงิน)\nสามารถเปิดโทร ตปท. ได้เลย";
