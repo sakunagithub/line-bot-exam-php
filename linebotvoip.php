@@ -376,7 +376,11 @@
     else if($message == "13" || $message == "13." || $message == "โทรต่างประเทศ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "Add Access\n> en\n> ใส่ password\n> configure terminal\n> session-router\n> local-policy\n> select\n> กด Enter\n> เลือกแถวว่างเช่น 180\n> พิมพ์ 180 กด Enter\n> show\n> from-address (+66xxxxxxxx +66...)\n> done\n> ex\n> ex\n> ex\n> verify-config\n> save-config\n> activate-config\n> ex";
+        $arrayPostData['messages'][0]['text'] = "ลูกค้าต้องการเปิดโทรต่างประเทศ\nCAT2Call Plus prepaid (เติมเงิน)\nสามารถเปิดโทร ตปท. ได้เลย";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "CAT2Call Plus postpaid (รายเดือน), SIP\nส่งเมลมาที่ catvoip@cattelecom.com เอกสารแนบเพิ่มเติม\n- รายละเอียดลูกค้า เช่น จดทะเบียนในนาม ชื่อ บริษัท จะพิมพ์หรือส่งไฟล์มาก็ได้\n- บิลงวดสุดท้าย (ถ้ามี)";
+        $arrayPostData['messages'][2]['type'] = "text";
+        $arrayPostData['messages'][2]['text'] = "One Connect\nสค.หรือเซลที่ทำการขาย update มาใน CSS";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
