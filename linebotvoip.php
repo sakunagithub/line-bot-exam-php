@@ -331,8 +331,8 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "Displayed Name: ใส่ค่าอะไรก็ได้\nUsername: +66XXXXXXXX\nPassword: ใส่ pass ที่ได้ในระบบ\nAuthorization Name: +66XXXXXXXX@catnextgen.com\nDomain: catnextgen.com\nProxy Address: ใส่ IP Access:Port";
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "Codec: G729,G711A";
+        $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "Codec: G729,G711A";
         replyMsg($arrayHeader,$arrayPostData);
     } 
     
