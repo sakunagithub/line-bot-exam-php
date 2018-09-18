@@ -70,10 +70,10 @@
         replyMsg($arrayHeader,$arrayPostData);
     } 
     #บริการ Hosted PBX
-    else if($message == "S3" || $message == "s3" || $message == "hosted PBX" || $message == "Hosted" || $message == "hosted"){
+    else if($message == "S3" || $message == "s3" || $message == "Cloud PBX" || $message == "Hosted" || $message == "hosted"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "บริการ Hosted PBX";
+        $arrayPostData['messages'][0]['text'] = "บริการ Cloud PBX";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ลักษณะบริการ\n\nเป็นบริการให้เช่าระบบตู้สาขาโทรศัพท์ผ่านโครงข่ายอินเทอร์เน็ตที่ได้รับการออกแบบมาเพื่อใช้งานทดแทนตู้สาขา (PABX) โดยที่ผู้ใช้บริการไม่ต้องลงทุนติดตั้งตู้สาขา ทำให้สามารถลดค่าใช้จ่ายในการจัดซื้อและการบำรุงรักษา ซึ่งสามารถใช้งานได้เทียบเท่ากับตู้สาขา ไม่ว่าจะเป็นการติดต่อกัน โดยใช้หมายเลขภายใน (Extension Number) การโทรออกไปยังปลายทางอื่นๆ การโอนสาย การดึงสาย การพักสาย รวมไปถึงระบบเสียงตอบรับอัตโนมัติ IVR (Interactive Voice Response) หรือ Auto-Attendant ผู้ใช้บริการเพียงแค่มีอุปกรณ์สำหรับใช้งาน VoIP เช่น IP phone หรือ Internet phone adapter โดยทำการเชื่อมต่อกับระบบ CAT hosted PBX ผ่านวงจร IP Network หรือวงจรอินเทอร์เน็ตของผู้ให้บริการรายใดก็ได้";
         $arrayPostData['messages'][2]['type'] = "text";
@@ -330,7 +330,7 @@
     else if($message == "10" || $message == "10." || $message == "config" || $message == "Config"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "Displayed Name: ใส่ค่าอะไรก็ได้\nUsername: +66XXXXXXXX\nPassword: ใส่ pass ที่ได้ในระบบ\nAuthorization Name: +66XXXXXXXX@catnextgen.com\nDomain: catnextgen.com\nProxy Address: ใส่ IP Access:Port";
+        $arrayPostData['messages'][0]['text'] = "Displayed Name: ใส่ค่าอะไรก็ได้\nUsername: +66XXXXXXXX\nPassword: ใส่ pass ที่ได้ในระบบ\nAuthorization Name: 66XXXXXXXX@catnextgen.com\nDomain: catnextgen.com\nProxy Address: ใส่ IP Access:Port";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "Codec: G729,G711A";
         replyMsg($arrayHeader,$arrayPostData);
@@ -346,9 +346,9 @@
         $arrayPostData['messages'][2]['type'] = "text";
         $arrayPostData['messages'][2]['text'] = "one-connect\naccess_onu\n172.27.99.99 : 5060  (2 con)";  
         $arrayPostData['messages'][3]['type'] = "text";
-        $arrayPostData['messages'][3]['text'] = "sip-connect, Hosted PBX\naccess02\n202.129.61.118 : 5060 (30 con)\n\nsip-connect\naccess02_5\n202.129.61.118 : 5165 (5 con)\n\naccess02_10\n202.129.61.118 : 5166 (10 con)\n\naccess02_30\n202.129.61.118 : 5167 (30 con)\n\naccess02_60\n202.129.61.118 : 5168 (60 con)\n\naccess04\n202.129.61.196 : 5060 (60 con)\n\naccess05\n202.129.61.197 : 5060 (120 con)";
+        $arrayPostData['messages'][3]['text'] = "sip-connect, Hosted PBX หรือ Cloud PBX\naccess02\n202.129.61.118 : 5060 (30 con)\n\nsip-connect\naccess02_5\n202.129.61.118 : 5165 (5 con)\n\naccess02_10\n202.129.61.118 : 5166 (10 con)\n\naccess02_30\n202.129.61.118 : 5167 (30 con)\n\naccess02_60\n202.129.61.118 : 5168 (60 con)\n\naccess04\n202.129.61.196 : 5060 (60 con)\n\naccess05\n202.129.61.197 : 5060 (120 con)";
         $arrayPostData['messages'][4]['type'] = "text";
-        $arrayPostData['messages'][4]['text'] = "Hosted PBX\naccess01p5063\n202.129.61.102 : 5063 (10 con)\n\naccess02p5160\n202.129.61.118 : 5160 (10 con)";
+        $arrayPostData['messages'][4]['text'] = "Hosted PBX หรือ Cloud PBX\naccess01p5063\n202.129.61.102 : 5063 (10 con)\n\naccess02p5160\n202.129.61.118 : 5160 (10 con)";
         replyMsg($arrayHeader,$arrayPostData);
     } 
 
