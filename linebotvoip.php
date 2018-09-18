@@ -44,7 +44,7 @@
     else if($message == "1" || $message == "1." || $message == "Voice" || $message == "voice" || $message == "Service" || $message == "service"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เลือกข้อมููลบริการที่ต้องการค้นหา\nโดยพิมพ์ตัวเลือกดังนี้...\n\nS1 :: CAT 001,009\nS2 :: One Connect\nS3 :: Hosted PBX\nS4 :: SIP Connect\nS5 :: Fax2Email\nS6 :: CAT2call plus (postpaid, prepaid)";
+        $arrayPostData['messages'][0]['text'] = "เลือกข้อมููลบริการที่ต้องการค้นหา\nโดยพิมพ์ตัวเลือกดังนี้...\n\nS1 :: CAT 001,009\nS2 :: One Connect\nS3 :: Cloud PBX\nS4 :: SIP Connect\nS5 :: Fax2Email\nS6 :: CAT2call plus (postpaid, prepaid)";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #001,009
